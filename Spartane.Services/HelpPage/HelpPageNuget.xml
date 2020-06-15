@@ -1,0 +1,2184 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Spartane.Services</name>
+    </assembly>
+    <members>
+        <member name="T:Spartane.Services.Business_Rule_Creation.Business_Rule_CreationService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Business_Rule_Creation.IBusiness_Rule_CreationService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Dashboard_Config_Detail.Dashboard_Config_DetailService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Dashboard_Config_Detail.IDashboard_Config_DetailService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Dashboard_Editor.Dashboard_EditorService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Dashboard_Editor.IDashboard_EditorService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Dashboard_Status.Dashboard_StatusService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Dashboard_Status.IDashboard_StatusService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.SpartanChangePasswordAutorizationEstatus.ISpartanChangePasswordAutorizationEstatusService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.SpartanChangePasswordAutorizationEstatus.SpartanChangePasswordAutorizationEstatusService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.SpartaneFile.ISpartaneFileService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Departamento.SpartaneFileService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.SpartanObject.ISpartanObjectService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.SpartanObject.SpartanObjectService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Attribute_Control_Type.ISpartan_Attribute_Control_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Attribute_Control_Type.Spartan_Attribute_Control_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Attribute_Type.ISpartan_Attribute_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Attribute_Type.Spartan_Attribute_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Bitacora_SQL.ISpartan_Bitacora_SQLService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Bitacora_SQL.Spartan_Bitacora_SQLService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Actions_False_Detail.ISpartan_BR_Actions_False_DetailService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Actions_False_Detail.Spartan_BR_Actions_False_DetailService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Actions_True_Detail.ISpartan_BR_Actions_True_DetailService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Actions_True_Detail.Spartan_BR_Actions_True_DetailService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Action.ISpartan_BR_ActionService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Action.Spartan_BR_ActionService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Action_Classification.ISpartan_BR_Action_ClassificationService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Action_Classification.Spartan_BR_Action_ClassificationService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Action_Configuration_Detail.ISpartan_BR_Action_Configuration_DetailService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Action_Configuration_Detail.Spartan_BR_Action_Configuration_DetailService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Action_Param_Type.ISpartan_BR_Action_Param_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Action_Param_Type.Spartan_BR_Action_Param_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Action_Result.ISpartan_BR_Action_ResultService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Action_Result.Spartan_BR_Action_ResultService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Attribute_Restrictions_Detail.ISpartan_BR_Attribute_Restrictions_DetailService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Attribute_Restrictions_Detail.Spartan_BR_Attribute_Restrictions_DetailService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Complexity.ISpartan_BR_ComplexityService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Complexity.Spartan_BR_ComplexityService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Conditions_Detail.ISpartan_BR_Conditions_DetailService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Conditions_Detail.Spartan_BR_Conditions_DetailService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Condition.ISpartan_BR_ConditionService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Condition.Spartan_BR_ConditionService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Condition_Operator.ISpartan_BR_Condition_OperatorService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Condition_Operator.Spartan_BR_Condition_OperatorService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Event_Restrictions_Detail.ISpartan_BR_Event_Restrictions_DetailService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Event_Restrictions_Detail.Spartan_BR_Event_Restrictions_DetailService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_History.ISpartan_BR_HistoryService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_History.Spartan_BR_HistoryService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Modifications_Log.ISpartan_BR_Modifications_LogService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Modifications_Log.Spartan_BR_Modifications_LogService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Operation.ISpartan_BR_OperationService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Operation.Spartan_BR_OperationService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Operation_Detail.ISpartan_BR_Operation_DetailService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Operation_Detail.Spartan_BR_Operation_DetailService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Operation_Restrictions_Detail.ISpartan_BR_Operation_Restrictions_DetailService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Operation_Restrictions_Detail.Spartan_BR_Operation_Restrictions_DetailService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Operator_Type.ISpartan_BR_Operator_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Operator_Type.Spartan_BR_Operator_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Peer_Review.ISpartan_BR_Peer_ReviewService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Peer_Review.Spartan_BR_Peer_ReviewService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Presentation_Control_Type.ISpartan_BR_Presentation_Control_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Presentation_Control_Type.Spartan_BR_Presentation_Control_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Process_Event.ISpartan_BR_Process_EventService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Process_Event.Spartan_BR_Process_EventService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Process_Event_Detail.ISpartan_BR_Process_Event_DetailService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Process_Event_Detail.Spartan_BR_Process_Event_DetailService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Rejection_Reason.ISpartan_BR_Rejection_ReasonService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Rejection_Reason.Spartan_BR_Rejection_ReasonService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Scope.ISpartan_BR_ScopeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Scope.Spartan_BR_ScopeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Scope_Detail.ISpartan_BR_Scope_DetailService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Scope_Detail.Spartan_BR_Scope_DetailService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Status.ISpartan_BR_StatusService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Status.Spartan_BR_StatusService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Testing.ISpartan_BR_TestingService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Testing.Spartan_BR_TestingService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Type_History.ISpartan_BR_Type_HistoryService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_BR_Type_History.Spartan_BR_Type_HistoryService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Business_Rule.ISpartan_Business_RuleService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Business_Rule.Spartan_Business_RuleService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_ChangePasswordAutorization.ISpartan_ChangePasswordAutorizationService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_ChangePasswordAutorization.Spartan_ChangePasswordAutorizationService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Control_Type.ISpartan_Control_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Control_Type.Spartan_Control_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Event_Type.ISpartan_Event_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Event_Type.Spartan_Event_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_File.ISpartan_FileService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_File.Spartan_FileService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Format.ISpartan_FormatService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Format.Spartan_FormatService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Format_Configuration.ISpartan_Format_ConfigurationService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Format_Configuration.Spartan_Format_ConfigurationService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Format_Field.ISpartan_Format_FieldService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Format_Field.Spartan_Format_FieldService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Format_Permissions.ISpartan_Format_PermissionsService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Format_Permissions.Spartan_Format_PermissionsService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Format_Permission_Type.ISpartan_Format_Permission_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Format_Permission_Type.Spartan_Format_Permission_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Format_Related.ISpartan_Format_RelatedService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Format_Related.Spartan_Format_RelatedService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Format_Type.ISpartan_Format_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Format_Type.Spartan_Format_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Function.ISpartan_FunctionService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Function.Spartan_FunctionService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Function_Characteristic.ISpartan_Function_CharacteristicService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Function_Characteristic.Spartan_Function_CharacteristicService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Function_Characteristic_Config.ISpartan_Function_Characteristic_ConfigService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Function_Characteristic_Config.Spartan_Function_Characteristic_ConfigService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Function_Event.ISpartan_Function_EventService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Function_Event.Spartan_Function_EventService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Function_Status.ISpartan_Function_StatusService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Function_Status.Spartan_Function_StatusService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Function_Type.ISpartan_Function_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Function_Type.Spartan_Function_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Function_Type_Status.ISpartan_Function_Type_StatusService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Function_Type_Status.Spartan_Function_Type_StatusService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Language_Text.ISpartan_Language_TextService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Language_Text.Spartan_Language_TextService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Layout_Status.ISpartan_Layout_StatusService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Layout_Status.Spartan_Layout_StatusService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Menu_Orientation.ISpartan_Menu_OrientationService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Menu_Orientation.Spartan_Menu_OrientationService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Menu_Style.ISpartan_Menu_StyleService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Menu_Style.Spartan_Menu_StyleService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Metadata.ISpartan_MetadataService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Metadata.Spartan_MetadataService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Method_Clasification.ISpartan_Method_ClasificationService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Method_Clasification.Spartan_Method_ClasificationService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Method_Type.ISpartan_Method_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Method_Type.Spartan_Method_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Method_Type_Function.ISpartan_Method_Type_FunctionService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Method_Type_Function.Spartan_Method_Type_FunctionService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Method_Type_Status.ISpartan_Method_Type_StatusService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Method_Type_Status.Spartan_Method_Type_StatusService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Module.ISpartan_ModuleService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Module.Spartan_ModuleService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Module_Config.ISpartan_Module_ConfigService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Module_Config.Spartan_Module_ConfigService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Module_Object.ISpartan_Module_ObjectService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Module_Object.Spartan_Module_ObjectService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="M:Spartane.Services.Spartan_Module_Object.Spartan_Module_ObjectService.ListaSelAll(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="startRowIndex"></param>
+            <param name="maximumRows"></param>
+            <param name="Where"></param>
+            <param name="Order"></param>
+            <remarks>
+            Date: (06/03/2016)
+            Added Object_Type value in Object_Id_Spartan_Object collection
+            retrieved from stored procedure sp_ListSelAll_Spartan_Module_Object
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Module_Object_Characteristic.ISpartan_Module_Object_CharacteristicService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Module_Object_Characteristic.Spartan_Module_Object_CharacteristicService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Module_Object_Method.ISpartan_Module_Object_MethodService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Module_Object_Method.Spartan_Module_Object_MethodService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Module_Status.ISpartan_Module_StatusService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Module_Status.Spartan_Module_StatusService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Notice.ISpartan_NoticeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Notice.Spartan_NoticeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Notice_Status.ISpartan_Notice_StatusService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Notice_Status.Spartan_Notice_StatusService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Notice_Type.ISpartan_Notice_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Notice_Type.Spartan_Notice_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object.ISpartan_ObjectService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object.Spartan_ObjectService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object_Characteristic.ISpartan_Object_CharacteristicService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object_Characteristic.Spartan_Object_CharacteristicService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object_Config.ISpartan_Object_ConfigService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object_Config.Spartan_Object_ConfigService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object_Method.ISpartan_Object_MethodService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object_Method.Spartan_Object_MethodService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object_Method_Characteristic.ISpartan_Object_Method_CharacteristicService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object_Method_Characteristic.Spartan_Object_Method_CharacteristicService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object_Method_Status.ISpartan_Object_Method_StatusService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object_Method_Status.Spartan_Object_Method_StatusService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object_Path.ISpartan_Object_PathService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object_Path.Spartan_Object_PathService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object_Status.ISpartan_Object_StatusService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object_Status.Spartan_Object_StatusService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object_Type.ISpartan_Object_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Object_Type.Spartan_Object_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Order_Type.ISpartan_Order_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Order_Type.Spartan_Order_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report.ISpartan_ReportService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report.Spartan_ReportService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Advance_Filter.ISpartan_Report_Advance_FilterService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Advance_Filter.Spartan_Report_Advance_FilterService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Fields_Detail.ISpartan_Report_Fields_DetailService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Fields_Detail.Spartan_Report_Fields_DetailService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Field_Type.ISpartan_Report_Field_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Field_Type.Spartan_Report_Field_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Filter.ISpartan_Report_FilterService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Filter.Spartan_Report_FilterService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Format.ISpartan_Report_FormatService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Format.Spartan_Report_FormatService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Function.ISpartan_Report_FunctionService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Function.Spartan_Report_FunctionService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Order_Type.ISpartan_Report_Order_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Order_Type.Spartan_Report_Order_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Permissions.ISpartan_Report_PermissionsService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Permissions.Spartan_Report_PermissionsService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Permission_Type.ISpartan_Report_Permission_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Permission_Type.Spartan_Report_Permission_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Presentation_Type.ISpartan_Report_Presentation_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Presentation_Type.Spartan_Report_Presentation_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Presentation_View.ISpartan_Report_Presentation_ViewService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Presentation_View.Spartan_Report_Presentation_ViewService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Status.ISpartan_Report_StatusService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Report_Status.Spartan_Report_StatusService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Security_Event_Result.ISpartan_Security_Event_ResultService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Security_Event_Result.Spartan_Security_Event_ResultService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Security_Event_Type.ISpartan_Security_Event_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Security_Event_Type.Spartan_Security_Event_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Security_Log.ISpartan_Security_LogService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Security_Log.Spartan_Security_LogService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Session_Event_Type.ISpartan_Session_Event_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Session_Event_Type.Spartan_Session_Event_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Session_Log.ISpartan_Session_LogService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Session_Log.Spartan_Session_LogService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Settings.ISpartan_SettingsService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Settings.Spartan_SettingsService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_System.ISpartan_SystemService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_System.Spartan_SystemService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_System_Language.ISpartan_System_LanguageService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_System_Language.Spartan_System_LanguageService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_System_Layout.ISpartan_System_LayoutService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_System_Layout.Spartan_System_LayoutService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Token_Type.ISpartan_Token_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Token_Type.Spartan_Token_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Traduction_Concept_Type.ISpartan_Traduction_Concept_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Traduction_Concept_Type.Spartan_Traduction_Concept_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Traduction_Detail.ISpartan_Traduction_DetailService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Traduction_Detail.Spartan_Traduction_DetailService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Traduction_Language.ISpartan_Traduction_LanguageService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Traduction_Language.Spartan_Traduction_LanguageService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Traduction_Object.ISpartan_Traduction_ObjectService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Traduction_Object.Spartan_Traduction_ObjectService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Traduction_Object_Type.ISpartan_Traduction_Object_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Traduction_Object_Type.Spartan_Traduction_Object_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Traduction_Process.ISpartan_Traduction_ProcessService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Traduction_Process.Spartan_Traduction_ProcessService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Traduction_Process_Data.ISpartan_Traduction_Process_DataService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Traduction_Process_Data.Spartan_Traduction_Process_DataService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Traduction_Process_Workflow.ISpartan_Traduction_Process_WorkflowService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Traduction_Process_Workflow.Spartan_Traduction_Process_WorkflowService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Transaction_Log.ISpartan_Transaction_LogService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Transaction_Log.Spartan_Transaction_LogService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Transition_Event_Type.ISpartan_Transition_Event_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Transition_Event_Type.Spartan_Transition_Event_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Transition_Log_Type.ISpartan_Transition_Log_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_Transition_Log_Type.Spartan_Transition_Log_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User.ISpartan_UserService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User.Spartan_UserService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Alert.ISpartan_User_AlertService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Alert.Spartan_User_AlertService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Alert_Status.ISpartan_User_Alert_StatusService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Alert_Status.Spartan_User_Alert_StatusService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Alert_Type.ISpartan_User_Alert_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Alert_Type.Spartan_User_Alert_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Favorite_List.ISpartan_User_Favorite_ListService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Favorite_List.Spartan_User_Favorite_ListService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Favorite_Object.ISpartan_User_Favorite_ObjectService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Favorite_Object.Spartan_User_Favorite_ObjectService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Historical_Password.ISpartan_User_Historical_PasswordService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Historical_Password.Spartan_User_Historical_PasswordService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Most_Used_Object.ISpartan_User_Most_Used_ObjectService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Most_Used_Object.Spartan_User_Most_Used_ObjectService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Object_Method_Config.ISpartan_User_Object_Method_ConfigService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Object_Method_Config.Spartan_User_Object_Method_ConfigService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Quicklink.ISpartan_User_QuicklinkService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Quicklink.Spartan_User_QuicklinkService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Role.ISpartan_User_RoleService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Role.Spartan_User_RoleService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Role_Status.ISpartan_User_Role_StatusService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Role_Status.Spartan_User_Role_StatusService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Rule_Module.ISpartan_User_Rule_ModuleService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Rule_Module.Spartan_User_Rule_ModuleService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="M:Spartane.Services.Spartan_User_Rule_Module.Spartan_User_Rule_ModuleService.Delete(System.Nullable{System.Int16},System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Key"></param>
+            <param name="SpartaneUserRole">
+            Added as required by Stored Procedure
+            </param>
+            <returns></returns>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Rule_Module_Object.ISpartan_User_Rule_Module_ObjectService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Rule_Module_Object.Spartan_User_Rule_Module_ObjectService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Rule_Object_Function.ISpartan_User_Rule_Object_FunctionService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Rule_Object_Function.Spartan_User_Rule_Object_FunctionService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="M:Spartane.Services.Spartan_User_Rule_Object_Function.Spartan_User_Rule_Object_FunctionService.Insert(Spartane.Core.Classes.Spartan_User_Rule_Object_Function.Spartan_User_Rule_Object_Function)">
+            <summary>
+            
+            </summary>
+            <param name="entity"></param>
+            <remarks>
+            Date(06/02/2016)
+            Added missing parameter MethodID.
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Status.ISpartan_User_StatusService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_User_Status.Spartan_User_StatusService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow.ISpartan_WorkFlowService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow.Spartan_WorkFlowService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Conditions_by_State.ISpartan_WorkFlow_Conditions_by_StateService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Conditions_by_State.Spartan_WorkFlow_Conditions_by_StateService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Condition.ISpartan_WorkFlow_ConditionService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Condition.Spartan_WorkFlow_ConditionService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Condition_Operator.ISpartan_WorkFlow_Condition_OperatorService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Condition_Operator.Spartan_WorkFlow_Condition_OperatorService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Information_by_State.ISpartan_WorkFlow_Information_by_StateService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Information_by_State.Spartan_WorkFlow_Information_by_StateService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Matrix_of_States.ISpartan_WorkFlow_Matrix_of_StatesService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Matrix_of_States.Spartan_WorkFlow_Matrix_of_StatesService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Operator.ISpartan_WorkFlow_OperatorService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Operator.Spartan_WorkFlow_OperatorService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Phases.ISpartan_WorkFlow_PhasesService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Phases.Spartan_WorkFlow_PhasesService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Phase_Status.ISpartan_WorkFlow_Phase_StatusService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Phase_Status.Spartan_WorkFlow_Phase_StatusService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Phase_Type.ISpartan_WorkFlow_Phase_TypeService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Phase_Type.Spartan_WorkFlow_Phase_TypeService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Roles_by_State.ISpartan_WorkFlow_Roles_by_StateService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Roles_by_State.Spartan_WorkFlow_Roles_by_StateService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_State.ISpartan_WorkFlow_StateService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_State.Spartan_WorkFlow_StateService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Status.ISpartan_WorkFlow_StatusService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Status.Spartan_WorkFlow_StatusService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Type_Flow_Control.ISpartan_WorkFlow_Type_Flow_ControlService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Type_Flow_Control.Spartan_WorkFlow_Type_Flow_ControlService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Type_Work_Distribution.ISpartan_WorkFlow_Type_Work_DistributionService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Spartan_WorkFlow_Type_Work_Distribution.Spartan_WorkFlow_Type_Work_DistributionService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Template_Dashboard_Detail.ITemplate_Dashboard_DetailService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Template_Dashboard_Detail.Template_Dashboard_DetailService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Template_Dashboard_Editor.ITemplate_Dashboard_EditorService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Template_Dashboard_Editor.Template_Dashboard_EditorService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.TTUsuarios.ITTUsuariosService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.TTUsuarios.TTUsuariosService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Antiguedad_Ejercicios.IAntiguedad_EjerciciosService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Antiguedad_Ejercicios.Antiguedad_EjerciciosService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Bebidas.IBebidasService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Bebidas.BebidasService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Calorias.ICaloriasService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Calorias.CaloriasService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Cantidad_Comidas.ICantidad_ComidasService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Cantidad_Comidas.Cantidad_ComidasService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Categorias_de_platillos.ICategorias_de_platillosService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Categorias_de_platillos.Categorias_de_platillosService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Clasificacion_Ingredientes.IClasificacion_IngredientesService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Clasificacion_Ingredientes.Clasificacion_IngredientesService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Detalle_Antecedentes_Familiares.IDetalle_Antecedentes_FamiliaresService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Detalle_Antecedentes_Familiares.Detalle_Antecedentes_FamiliaresService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Detalle_Antecedentes_No_Patologicos.IDetalle_Antecedentes_No_PatologicosService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Detalle_Antecedentes_No_Patologicos.Detalle_Antecedentes_No_PatologicosService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Detalle_de_Ingredientes.IDetalle_de_IngredientesService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Detalle_de_Ingredientes.Detalle_de_IngredientesService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Detalle_de_Padecimientos.IDetalle_de_PadecimientosService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Detalle_de_Padecimientos.Detalle_de_PadecimientosService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Detalle_Examenes_Laboratorio.IDetalle_Examenes_LaboratorioService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Detalle_Examenes_Laboratorio.Detalle_Examenes_LaboratorioService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Detalle_Preferencia_Bebidas.IDetalle_Preferencia_BebidasService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Detalle_Preferencia_Bebidas.Detalle_Preferencia_BebidasService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Detalle_Terapia_Hormonal.IDetalle_Terapia_HormonalService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Detalle_Terapia_Hormonal.Detalle_Terapia_HormonalService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Dias_de_la_semana.IDias_de_la_semanaService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Dias_de_la_semana.Dias_de_la_semanaService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Dificultad_de_platillos.IDificultad_de_platillosService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Dificultad_de_platillos.Dificultad_de_platillosService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Duracion_Ejercicio.IDuracion_EjercicioService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Duracion_Ejercicio.Duracion_EjercicioService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Ejercicios.IEjerciciosService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Ejercicios.EjerciciosService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Empresas.IEmpresasService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Empresas.EmpresasService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Enfermedades.IEnfermedadesService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Enfermedades.EnfermedadesService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Estado.IEstadoService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Estado.EstadoService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Estado_Civil.IEstado_CivilService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Estado_Civil.Estado_CivilService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Estado_de_Animo.IEstado_de_AnimoService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Estado_de_Animo.Estado_de_AnimoService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Estatus_Paciente.IEstatus_PacienteService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Estatus_Paciente.Estatus_PacienteService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Estatus_Padecimiento.IEstatus_PadecimientoService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Estatus_Padecimiento.Estatus_PadecimientoService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Frecuencia_Ejercicio.IFrecuencia_EjercicioService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Frecuencia_Ejercicio.Frecuencia_EjercicioService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Frecuencia_Sustancias.IFrecuencia_SustanciasService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Frecuencia_Sustancias.Frecuencia_SustanciasService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Indicadores_Laboratorio.IIndicadores_LaboratorioService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Indicadores_Laboratorio.Indicadores_LaboratorioService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Ingredientes.IIngredientesService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Ingredientes.IngredientesService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Marca.IMarcaService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Marca.MarcaService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Medicos.IMedicosService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Medicos.MedicosService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Nivel_de_Satisfaccion.INivel_de_SatisfaccionService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Nivel_de_Satisfaccion.Nivel_de_SatisfaccionService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Objetivos.IObjetivosService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Objetivos.ObjetivosService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Pacientes.IPacientesService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Pacientes.PacientesService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Padecimientos.IPadecimientosService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Padecimientos.PadecimientosService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Pais.IPaisService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Pais.PaisService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Parentesco.IParentescoService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Parentesco.ParentescoService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Periodo_del_dia.IPeriodo_del_diaService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Periodo_del_dia.Periodo_del_diaService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Platillos.IPlatillosService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Platillos.PlatillosService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Preferencias_Entrecomidas.IPreferencias_EntrecomidasService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Preferencias_Entrecomidas.Preferencias_EntrecomidasService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Preferencias_Grasas.IPreferencias_GrasasService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Preferencias_Grasas.Preferencias_GrasasService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Preferencias_Preparacion.IPreferencias_PreparacionService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Preferencias_Preparacion.Preferencias_PreparacionService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Preferencias_Sal.IPreferencias_SalService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Preferencias_Sal.Preferencias_SalService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Presentacion.IPresentacionService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Presentacion.PresentacionService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Rango_Consumo_Bebidas.IRango_Consumo_BebidasService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Rango_Consumo_Bebidas.Rango_Consumo_BebidasService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Rango_de_Horas.IRango_de_HorasService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Rango_de_Horas.Rango_de_HorasService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Registro.IRegistroService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Registro.RegistroService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Respuesta_Logica.IRespuesta_LogicaService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Respuesta_Logica.Respuesta_LogicaService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Resultados_IMC.IResultados_IMCService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Resultados_IMC.Resultados_IMCService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Seleccion_de_Rangos.ISeleccion_de_RangosService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Seleccion_de_Rangos.Seleccion_de_RangosService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Sexo.ISexoService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Sexo.SexoService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Suplementos.ISuplementosService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Suplementos.SuplementosService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Sustancias.ISustanciasService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Sustancias.SustanciasService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Tiempo_Padecimiento.ITiempo_PadecimientoService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Tiempo_Padecimiento.Tiempo_PadecimientoService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Tiempos_de_Comida.ITiempos_de_ComidaService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Tiempos_de_Comida.Tiempos_de_ComidaService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Tipo_de_Dieta.ITipo_de_DietaService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Tipo_de_Dieta.Tipo_de_DietaService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Tipo_de_Registro.ITipo_de_RegistroService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Tipo_de_Registro.Tipo_de_RegistroService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Tipo_Ejercicio.ITipo_EjercicioService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Tipo_Ejercicio.Tipo_EjercicioService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Tipo_Modificacion_Alimentos.ITipo_Modificacion_AlimentosService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Tipo_Modificacion_Alimentos.Tipo_Modificacion_AlimentosService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Tipo_Paciente.ITipo_PacienteService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Tipo_Paciente.Tipo_PacienteService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Unidades_de_Medida.IUnidades_de_MedidaService">
+            <summary>
+            Authentificated Service
+            </summary>
+        </member>
+        <member name="T:Spartane.Services.Unidades_de_Medida.Unidades_de_MedidaService">
+            <summary>
+            Authentication Service
+            </summary>
+        </member>
+    </members>
+</doc>

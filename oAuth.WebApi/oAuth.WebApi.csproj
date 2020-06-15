@@ -1,0 +1,1007 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+ <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+ <PropertyGroup>
+ <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+ <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+ <ProductVersion>
+ </ProductVersion>
+ <SchemaVersion>2.0</SchemaVersion>
+ <ProjectGuid>{12BD72A4-42E8-427D-B94E-89F10BE694FD}</ProjectGuid>
+ <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+ <OutputType>Library</OutputType>
+ <AppDesignerFolder>Properties</AppDesignerFolder>
+ <RootNamespace>oAuth.WebApi</RootNamespace>
+ <AssemblyName>oAuth.WebApi</AssemblyName>
+ <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+ <UseIISExpress>true</UseIISExpress>
+ <IISExpressSSLPort />
+ <IISExpressAnonymousAuthentication />
+ <IISExpressWindowsAuthentication />
+ <IISExpressUseClassicPipelineMode />
+ <SccProjectName>SAK</SccProjectName>
+ <SccLocalPath>SAK</SccLocalPath>
+ <SccAuxPath>SAK</SccAuxPath>
+ <SccProvider>SAK</SccProvider>
+ <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+ <RestorePackages>true</RestorePackages>
+ </PropertyGroup>
+ <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+ <DebugSymbols>true</DebugSymbols>
+ <DebugType>full</DebugType>
+ <Optimize>false</Optimize>
+ <OutputPath>bin\</OutputPath>
+ <DefineConstants>DEBUG;TRACE</DefineConstants>
+ <ErrorReport>prompt</ErrorReport>
+ <WarningLevel>4</WarningLevel>
+ <DocumentationFile>HelpPage\HelpPageNuget.XML</DocumentationFile>
+ </PropertyGroup>
+ <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+ <DebugType>pdbonly</DebugType>
+ <Optimize>true</Optimize>
+ <OutputPath>bin\</OutputPath>
+ <DefineConstants>TRACE</DefineConstants>
+ <ErrorReport>prompt</ErrorReport>
+ <WarningLevel>4</WarningLevel>
+ </PropertyGroup>
+ <ItemGroup>
+ <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+ <SpecificVersion>False</SpecificVersion>
+ <HintPath>..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>
+ </Reference>
+ <Reference Include="Autofac.Configuration">
+ <HintPath>..\packages\Autofac.Configuration.3.3.0\lib\net40\Autofac.Configuration.dll</HintPath>
+ </Reference>
+ <Reference Include="Autofac.Integration.WebApi">
+ <HintPath>..\packages\Autofac.WebApi2.3.4.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+ </Reference>
+ <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+ <SpecificVersion>False</SpecificVersion>
+ <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+ </Reference>
+ <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+ <SpecificVersion>False</SpecificVersion>
+ <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+ </Reference>
+ <Reference Include="FirebaseNet">
+ <HintPath>..\..\..\..\Proyectos\Caintra\Caintrav1_0_4\Application\WebApi\oAuth.WebApi\bin\FirebaseNet.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.AspNet.Identity.Core">
+ <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+ <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.AspNet.Identity.Owin">
+ <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.CSharp" />
+ <Reference Include="Microsoft.Owin">
+ <HintPath>..\packages\Microsoft.Owin.3.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.Owin.Cors, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+ <SpecificVersion>False</SpecificVersion>
+ <HintPath>..\packages\Microsoft.Owin.Cors.3.0.0\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.Owin.Host.SystemWeb">
+ <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.Owin.Security">
+ <HintPath>..\packages\Microsoft.Owin.Security.3.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.Owin.Security.Cookies">
+ <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.Owin.Security.Jwt">
+ <HintPath>..\packages\Microsoft.Owin.Security.Jwt.3.0.0\lib\net45\Microsoft.Owin.Security.Jwt.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.Owin.Security.OAuth">
+ <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+ <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+ <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="Owin">
+ <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+ </Reference>
+ <Reference Include="PushSharp.Amazon, Version=4.0.10.0, Culture=neutral, PublicKeyToken=cf74b75eab2c0170, processorArchitecture=MSIL">
+ <HintPath>..\packages\PushSharp.4.0.10\lib\net45\PushSharp.Amazon.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="PushSharp.Apple, Version=4.0.10.0, Culture=neutral, PublicKeyToken=cf74b75eab2c0170, processorArchitecture=MSIL">
+ <HintPath>..\packages\PushSharp.4.0.10\lib\net45\PushSharp.Apple.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="PushSharp.Blackberry, Version=4.0.10.0, Culture=neutral, PublicKeyToken=cf74b75eab2c0170, processorArchitecture=MSIL">
+ <HintPath>..\packages\PushSharp.4.0.10\lib\net45\PushSharp.Blackberry.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="PushSharp.Core, Version=4.0.10.0, Culture=neutral, PublicKeyToken=cf74b75eab2c0170, processorArchitecture=MSIL">
+ <HintPath>..\packages\PushSharp.4.0.10\lib\net45\PushSharp.Core.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="PushSharp.Firefox, Version=4.0.10.0, Culture=neutral, PublicKeyToken=cf74b75eab2c0170, processorArchitecture=MSIL">
+ <HintPath>..\packages\PushSharp.4.0.10\lib\net45\PushSharp.Firefox.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="PushSharp.Google, Version=4.0.10.0, Culture=neutral, PublicKeyToken=cf74b75eab2c0170, processorArchitecture=MSIL">
+ <HintPath>..\packages\PushSharp.4.0.10\lib\net45\PushSharp.Google.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="PushSharp.Windows, Version=4.0.10.0, Culture=neutral, PublicKeyToken=cf74b75eab2c0170, processorArchitecture=MSIL">
+ <HintPath>..\packages\PushSharp.4.0.10\lib\net45\PushSharp.Windows.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="RestSharp">
+ <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+ </Reference>
+ <Reference Include="SendGrid.SmtpApi">
+ <HintPath>..\packages\SendGrid.SmtpApi.1.3.1\lib\net40\SendGrid.SmtpApi.dll</HintPath>
+ </Reference>
+ <Reference Include="SendGridMail">
+ <HintPath>..\packages\Sendgrid.6.1.0\lib\SendGridMail.dll</HintPath>
+ </Reference>
+ <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+ <HintPath>..\packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="System.DirectoryServices" />
+ <Reference Include="System.DirectoryServices.AccountManagement" />
+ <Reference Include="System.IdentityModel" />
+ <Reference Include="System.IdentityModel.Tokens.Jwt">
+ <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.4.0.1\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Net.Http" />
+ <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+ <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization" />
+ <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+ <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="System.Web.DynamicData" />
+ <Reference Include="System.Web.Entity" />
+ <Reference Include="System.Web.ApplicationServices" />
+ <Reference Include="System.ComponentModel.DataAnnotations" />
+ <Reference Include="System" />
+ <Reference Include="System.Data" />
+ <Reference Include="System.Core" />
+ <Reference Include="System.Data.DataSetExtensions" />
+ <Reference Include="System.Web.Extensions" />
+ <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+ <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.Helpers.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="System.Web.Http, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+ <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.6\lib\net45\System.Web.Http.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="System.Web.Http.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+ <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="System.Web.Http.Owin">
+ <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.2\lib\net45\System.Web.Http.Owin.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Web.Http.WebHost, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+ <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.6\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="System.Web.Mvc, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+ <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.6\lib\net45\System.Web.Mvc.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+ <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.6\lib\net45\System.Web.Razor.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+ <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+ <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+ <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ <Reference Include="System.Xml.Linq" />
+ <Reference Include="System.Drawing" />
+ <Reference Include="System.Web" />
+ <Reference Include="System.Xml" />
+ <Reference Include="System.Configuration" />
+ <Reference Include="System.Web.Services" />
+ <Reference Include="System.EnterpriseServices" />
+ <Reference Include="Thinktecture.IdentityModel.Core">
+ <HintPath>..\packages\Thinktecture.IdentityModel.Core.1.3.0\lib\net45\Thinktecture.IdentityModel.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+ <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+ <Private>True</Private>
+ </Reference>
+ </ItemGroup>
+ <ItemGroup>
+ <Content Include="api\Spartan_File\Files\File.txt" />
+ <Content Include="Areas\HelpPage\HelpPage.css" />
+ <Content Include="Global.asax" />
+ <Content Include="HelpPage\HelpPageNuget.xml" />
+ <Content Include="Web.config">
+ <SubType>Designer</SubType>
+ </Content>
+ </ItemGroup>
+ <ItemGroup>
+ <Compile Include="App_Start\WebApiConfig.cs" />
+ <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+ <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+ <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+ <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+ <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+ <Compile Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs" />
+ <Compile Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs" />
+ <Compile Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs" />
+ <Compile Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs" />
+ <Compile Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs" />
+ <Compile Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs" />
+ <Compile Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs" />
+ <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescription.cs" />
+ <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs" />
+ <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs" />
+ <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs" />
+ <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs" />
+ <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.cs" />
+ <Compile Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs" />
+ <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+ <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+ <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+ <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+ <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+ <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+ <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+ <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+ <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+ <Compile Include="Consumer\ApiUrlManager.cs" />
+ <Compile Include="Consumer\AuthenticationToken.cs" />
+ <Compile Include="Consumer\TokenManager.cs" />
+ <Compile Include="Controllers\AccountsController.cs" />
+ <Compile Include="Controllers\BaseApiController.cs" />
+ <Compile Include="Controllers\Business_Rule_CreationController.cs" />
+ <Compile Include="Controllers\Dashboard_Config_DetailController.cs" />
+ <Compile Include="Controllers\Dashboard_EditorController.cs" />
+ <Compile Include="Controllers\Dashboard_StatusController.cs" />
+ <Compile Include="Controllers\GrneratePDFController.cs" />
+ <Compile Include="Controllers\LDAPAuthenticationController.cs" />
+ <Compile Include="Controllers\MensajesController.cs" />
+ <Compile Include="Controllers\ReportController.cs" />
+ <Compile Include="Controllers\SpartanAdditionalMenu.cs" />
+ <Compile Include="Controllers\SpartanChangePasswordAutorizationEstatusController.cs" />
+ <Compile Include="Controllers\SpartaneFileController.cs" />
+ <Compile Include="Controllers\SpartanObjectController.cs" />
+ <Compile Include="Controllers\Spartan_Attribute_Control_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_Attribute_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_Bitacora_SQLController.cs" />
+ <Compile Include="Controllers\Spartan_BR_ActionController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Actions_False_DetailController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Actions_True_DetailController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Action_ClassificationController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Action_Configuration_DetailController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Action_Param_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Action_ResultController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Attribute_Restrictions_DetailController.cs" />
+ <Compile Include="Controllers\Spartan_BR_ComplexityController.cs" />
+ <Compile Include="Controllers\Spartan_BR_ConditionController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Conditions_DetailController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Condition_OperatorController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Event_Restrictions_DetailController.cs" />
+ <Compile Include="Controllers\Spartan_BR_HistoryController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Modifications_LogController.cs" />
+ <Compile Include="Controllers\Spartan_BR_OperationController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Operation_DetailController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Operation_Restrictions_DetailController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Operator_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Peer_ReviewController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Presentation_Control_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Process_EventController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Process_Event_DetailController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Rejection_ReasonController.cs" />
+ <Compile Include="Controllers\Spartan_BR_ScopeController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Scope_DetailController.cs" />
+ <Compile Include="Controllers\Spartan_BR_StatusController.cs" />
+ <Compile Include="Controllers\Spartan_BR_TestingController.cs" />
+ <Compile Include="Controllers\Spartan_BR_Type_HistoryController.cs" />
+ <Compile Include="Controllers\Spartan_Business_RuleController.cs" />
+ <Compile Include="Controllers\Spartan_ChangePasswordAutorizationController.cs" />
+ <Compile Include="Controllers\Spartan_Control_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_Event_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_FileController.cs" />
+ <Compile Include="Controllers\Spartan_FormatController.cs" />
+ <Compile Include="Controllers\Spartan_Format_ConfigurationController.cs" />
+ <Compile Include="Controllers\Spartan_Format_FieldController.cs" />
+ <Compile Include="Controllers\Spartan_Format_PermissionsController.cs" />
+ <Compile Include="Controllers\Spartan_Format_Permission_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_Format_RelatedController.cs" />
+ <Compile Include="Controllers\Spartan_Format_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_FunctionController.cs" />
+ <Compile Include="Controllers\Spartan_Function_CharacteristicController.cs" />
+ <Compile Include="Controllers\Spartan_Function_Characteristic_ConfigController.cs" />
+ <Compile Include="Controllers\Spartan_Function_EventController.cs" />
+ <Compile Include="Controllers\Spartan_Function_StatusController.cs" />
+ <Compile Include="Controllers\Spartan_Function_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_Function_Type_StatusController.cs" />
+ <Compile Include="Controllers\Spartan_Language_TextController.cs" />
+ <Compile Include="Controllers\Spartan_Layout_StatusController.cs" />
+ <Compile Include="Controllers\Spartan_LoginController.cs" />
+ <Compile Include="Controllers\Spartan_Menu_OrientationController.cs" />
+ <Compile Include="Controllers\Spartan_Menu_StyleController.cs" />
+ <Compile Include="Controllers\Spartan_MetadataController.cs" />
+ <Compile Include="Controllers\Spartan_Method_ClasificationController.cs" />
+ <Compile Include="Controllers\Spartan_Method_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_Method_Type_FunctionController.cs" />
+ <Compile Include="Controllers\Spartan_Method_Type_StatusController.cs" />
+ <Compile Include="Controllers\Spartan_ModuleController.cs" />
+ <Compile Include="Controllers\Spartan_Module_ConfigController.cs" />
+ <Compile Include="Controllers\Spartan_Module_ObjectController.cs" />
+ <Compile Include="Controllers\Spartan_Module_Object_CharacteristicController.cs" />
+ <Compile Include="Controllers\Spartan_Module_Object_MethodController.cs" />
+ <Compile Include="Controllers\Spartan_Module_StatusController.cs" />
+ <Compile Include="Controllers\Spartan_NoticeController.cs" />
+ <Compile Include="Controllers\Spartan_Notice_StatusController.cs" />
+ <Compile Include="Controllers\Spartan_Notice_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_ObjectController.cs" />
+ <Compile Include="Controllers\Spartan_Object_CharacteristicController.cs" />
+ <Compile Include="Controllers\Spartan_Object_ConfigController.cs" />
+ <Compile Include="Controllers\Spartan_Object_MethodController.cs" />
+ <Compile Include="Controllers\Spartan_Object_Method_CharacteristicController.cs" />
+ <Compile Include="Controllers\Spartan_Object_Method_StatusController.cs" />
+ <Compile Include="Controllers\Spartan_Object_PathController.cs" />
+ <Compile Include="Controllers\Spartan_Object_StatusController.cs" />
+ <Compile Include="Controllers\Spartan_Object_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_Order_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_QueryController.cs" />
+ <Compile Include="Controllers\Spartan_ReportController.cs" />
+ <Compile Include="Controllers\Spartan_Report_Advance_FilterController.cs" />
+ <Compile Include="Controllers\Spartan_Report_Fields_DetailController.cs" />
+ <Compile Include="Controllers\Spartan_Report_Field_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_Report_FilterController.cs" />
+ <Compile Include="Controllers\Spartan_Report_FormatController.cs" />
+ <Compile Include="Controllers\Spartan_Report_FunctionController.cs" />
+ <Compile Include="Controllers\Spartan_Report_Order_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_Report_PermissionsController.cs" />
+ <Compile Include="Controllers\Spartan_Report_Permission_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_Report_Presentation_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_Report_Presentation_ViewController.cs" />
+ <Compile Include="Controllers\Spartan_Report_StatusController.cs" />
+ <Compile Include="Controllers\Spartan_Security_Event_ResultController.cs" />
+ <Compile Include="Controllers\Spartan_Security_Event_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_Security_LogController.cs" />
+ <Compile Include="Controllers\Spartan_Session_Event_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_Session_LogController.cs" />
+ <Compile Include="Controllers\Spartan_SettingsController.cs" />
+ <Compile Include="Controllers\Spartan_SystemController.cs" />
+ <Compile Include="Controllers\Spartan_System_LanguageController.cs" />
+ <Compile Include="Controllers\Spartan_System_LayoutController.cs" />
+ <Compile Include="Controllers\Spartan_Token_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_Traduction_Concept_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_Traduction_DetailController.cs" />
+ <Compile Include="Controllers\Spartan_Traduction_LanguageController.cs" />
+ <Compile Include="Controllers\Spartan_Traduction_ObjectController.cs" />
+ <Compile Include="Controllers\Spartan_Traduction_Object_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_Traduction_ProcessController.cs" />
+ <Compile Include="Controllers\Spartan_Traduction_Process_DataController.cs" />
+ <Compile Include="Controllers\Spartan_Traduction_Process_WorkflowController.cs" />
+ <Compile Include="Controllers\Spartan_Transaction_LogController.cs" />
+ <Compile Include="Controllers\Spartan_Transition_Event_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_Transition_Log_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_UserController.cs" />
+ <Compile Include="Controllers\Spartan_User_AlertController.cs" />
+ <Compile Include="Controllers\Spartan_User_Alert_StatusController.cs" />
+ <Compile Include="Controllers\Spartan_User_Alert_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_User_Favorite_ListController.cs" />
+ <Compile Include="Controllers\Spartan_User_Favorite_ObjectController.cs" />
+ <Compile Include="Controllers\Spartan_User_Historical_PasswordController.cs" />
+ <Compile Include="Controllers\Spartan_User_Most_Used_ObjectController.cs" />
+ <Compile Include="Controllers\Spartan_User_Object_Method_ConfigController.cs" />
+ <Compile Include="Controllers\Spartan_User_QuicklinkController.cs" />
+ <Compile Include="Controllers\Spartan_User_RoleController.cs" />
+ <Compile Include="Controllers\Spartan_User_Role_StatusController.cs" />
+ <Compile Include="Controllers\Spartan_User_Rule_ModuleController.cs" />
+ <Compile Include="Controllers\Spartan_User_Rule_Module_ObjectController.cs" />
+ <Compile Include="Controllers\Spartan_User_Rule_Object_FunctionController.cs" />
+ <Compile Include="Controllers\Spartan_User_StatusController.cs" />
+ <Compile Include="Controllers\Spartan_WorkFlowController.cs" />
+ <Compile Include="Controllers\Spartan_WorkFlow_ConditionController.cs" />
+ <Compile Include="Controllers\Spartan_WorkFlow_Conditions_by_StateController.cs" />
+ <Compile Include="Controllers\Spartan_WorkFlow_Condition_OperatorController.cs" />
+ <Compile Include="Controllers\Spartan_WorkFlow_Information_by_StateController.cs" />
+ <Compile Include="Controllers\Spartan_WorkFlow_Matrix_of_StatesController.cs" />
+ <Compile Include="Controllers\Spartan_WorkFlow_OperatorController.cs" />
+ <Compile Include="Controllers\Spartan_WorkFlow_PhasesController.cs" />
+ <Compile Include="Controllers\Spartan_WorkFlow_Phase_StatusController.cs" />
+ <Compile Include="Controllers\Spartan_WorkFlow_Phase_TypeController.cs" />
+ <Compile Include="Controllers\Spartan_WorkFlow_Roles_by_StateController.cs" />
+ <Compile Include="Controllers\Spartan_WorkFlow_StateController.cs" />
+ <Compile Include="Controllers\Spartan_WorkFlow_StatusController.cs" />
+ <Compile Include="Controllers\Spartan_WorkFlow_Type_Flow_ControlController.cs" />
+ <Compile Include="Controllers\Spartan_WorkFlow_Type_Work_DistributionController.cs" />
+ <Compile Include="Controllers\Template_Dashboard_DetailController.cs" />
+ <Compile Include="Controllers\Template_Dashboard_EditorController.cs" />
+ <Compile Include="Controllers\TokenController.cs" />
+ <Compile Include="Controllers\TTUsuariosController.cs">
+ <SubType>Code</SubType>
+ </Compile>
+ <Compile Include="Controllers\Antiguedad_EjerciciosController.cs" />
+<Compile Include="Rules\Antiguedad_EjerciciosRules.cs" />
+<Compile Include="Controllers\BebidasController.cs" />
+<Compile Include="Rules\BebidasRules.cs" />
+<Compile Include="Controllers\CaloriasController.cs" />
+<Compile Include="Rules\CaloriasRules.cs" />
+<Compile Include="Controllers\Cantidad_ComidasController.cs" />
+<Compile Include="Rules\Cantidad_ComidasRules.cs" />
+<Compile Include="Controllers\Categorias_de_platillosController.cs" />
+<Compile Include="Rules\Categorias_de_platillosRules.cs" />
+<Compile Include="Controllers\Clasificacion_IngredientesController.cs" />
+<Compile Include="Rules\Clasificacion_IngredientesRules.cs" />
+<Compile Include="Controllers\Detalle_Antecedentes_FamiliaresController.cs" />
+<Compile Include="Rules\Detalle_Antecedentes_FamiliaresRules.cs" />
+<Compile Include="Controllers\Detalle_Antecedentes_No_PatologicosController.cs" />
+<Compile Include="Rules\Detalle_Antecedentes_No_PatologicosRules.cs" />
+<Compile Include="Controllers\Detalle_de_IngredientesController.cs" />
+<Compile Include="Rules\Detalle_de_IngredientesRules.cs" />
+<Compile Include="Controllers\Detalle_de_PadecimientosController.cs" />
+<Compile Include="Rules\Detalle_de_PadecimientosRules.cs" />
+<Compile Include="Controllers\Detalle_Examenes_LaboratorioController.cs" />
+<Compile Include="Rules\Detalle_Examenes_LaboratorioRules.cs" />
+<Compile Include="Controllers\Detalle_Preferencia_BebidasController.cs" />
+<Compile Include="Rules\Detalle_Preferencia_BebidasRules.cs" />
+<Compile Include="Controllers\Detalle_Terapia_HormonalController.cs" />
+<Compile Include="Rules\Detalle_Terapia_HormonalRules.cs" />
+<Compile Include="Controllers\Dias_de_la_semanaController.cs" />
+<Compile Include="Rules\Dias_de_la_semanaRules.cs" />
+<Compile Include="Controllers\Dificultad_de_platillosController.cs" />
+<Compile Include="Rules\Dificultad_de_platillosRules.cs" />
+<Compile Include="Controllers\Duracion_EjercicioController.cs" />
+<Compile Include="Rules\Duracion_EjercicioRules.cs" />
+<Compile Include="Controllers\EjerciciosController.cs" />
+<Compile Include="Rules\EjerciciosRules.cs" />
+<Compile Include="Controllers\EmpresasController.cs" />
+<Compile Include="Rules\EmpresasRules.cs" />
+<Compile Include="Controllers\EnfermedadesController.cs" />
+<Compile Include="Rules\EnfermedadesRules.cs" />
+<Compile Include="Controllers\EstadoController.cs" />
+<Compile Include="Rules\EstadoRules.cs" />
+<Compile Include="Controllers\Estado_CivilController.cs" />
+<Compile Include="Rules\Estado_CivilRules.cs" />
+<Compile Include="Controllers\Estado_de_AnimoController.cs" />
+<Compile Include="Rules\Estado_de_AnimoRules.cs" />
+<Compile Include="Controllers\Estatus_PacienteController.cs" />
+<Compile Include="Rules\Estatus_PacienteRules.cs" />
+<Compile Include="Controllers\Estatus_PadecimientoController.cs" />
+<Compile Include="Rules\Estatus_PadecimientoRules.cs" />
+<Compile Include="Controllers\Frecuencia_EjercicioController.cs" />
+<Compile Include="Rules\Frecuencia_EjercicioRules.cs" />
+<Compile Include="Controllers\Frecuencia_SustanciasController.cs" />
+<Compile Include="Rules\Frecuencia_SustanciasRules.cs" />
+<Compile Include="Controllers\Indicadores_LaboratorioController.cs" />
+<Compile Include="Rules\Indicadores_LaboratorioRules.cs" />
+<Compile Include="Controllers\IngredientesController.cs" />
+<Compile Include="Rules\IngredientesRules.cs" />
+<Compile Include="Controllers\MarcaController.cs" />
+<Compile Include="Rules\MarcaRules.cs" />
+<Compile Include="Controllers\MedicosController.cs" />
+<Compile Include="Rules\MedicosRules.cs" />
+<Compile Include="Controllers\Nivel_de_SatisfaccionController.cs" />
+<Compile Include="Rules\Nivel_de_SatisfaccionRules.cs" />
+<Compile Include="Controllers\ObjetivosController.cs" />
+<Compile Include="Rules\ObjetivosRules.cs" />
+<Compile Include="Controllers\PacientesController.cs" />
+<Compile Include="Rules\PacientesRules.cs" />
+<Compile Include="Controllers\PadecimientosController.cs" />
+<Compile Include="Rules\PadecimientosRules.cs" />
+<Compile Include="Controllers\PaisController.cs" />
+<Compile Include="Rules\PaisRules.cs" />
+<Compile Include="Controllers\ParentescoController.cs" />
+<Compile Include="Rules\ParentescoRules.cs" />
+<Compile Include="Controllers\Periodo_del_diaController.cs" />
+<Compile Include="Rules\Periodo_del_diaRules.cs" />
+<Compile Include="Controllers\PlatillosController.cs" />
+<Compile Include="Rules\PlatillosRules.cs" />
+<Compile Include="Controllers\Preferencias_EntrecomidasController.cs" />
+<Compile Include="Rules\Preferencias_EntrecomidasRules.cs" />
+<Compile Include="Controllers\Preferencias_GrasasController.cs" />
+<Compile Include="Rules\Preferencias_GrasasRules.cs" />
+<Compile Include="Controllers\Preferencias_PreparacionController.cs" />
+<Compile Include="Rules\Preferencias_PreparacionRules.cs" />
+<Compile Include="Controllers\Preferencias_SalController.cs" />
+<Compile Include="Rules\Preferencias_SalRules.cs" />
+<Compile Include="Controllers\PresentacionController.cs" />
+<Compile Include="Rules\PresentacionRules.cs" />
+<Compile Include="Controllers\Rango_Consumo_BebidasController.cs" />
+<Compile Include="Rules\Rango_Consumo_BebidasRules.cs" />
+<Compile Include="Controllers\Rango_de_HorasController.cs" />
+<Compile Include="Rules\Rango_de_HorasRules.cs" />
+<Compile Include="Controllers\RegistroController.cs" />
+<Compile Include="Rules\RegistroRules.cs" />
+<Compile Include="Controllers\Respuesta_LogicaController.cs" />
+<Compile Include="Rules\Respuesta_LogicaRules.cs" />
+<Compile Include="Controllers\Resultados_IMCController.cs" />
+<Compile Include="Rules\Resultados_IMCRules.cs" />
+<Compile Include="Controllers\Seleccion_de_RangosController.cs" />
+<Compile Include="Rules\Seleccion_de_RangosRules.cs" />
+<Compile Include="Controllers\SexoController.cs" />
+<Compile Include="Rules\SexoRules.cs" />
+<Compile Include="Controllers\SuplementosController.cs" />
+<Compile Include="Rules\SuplementosRules.cs" />
+<Compile Include="Controllers\SustanciasController.cs" />
+<Compile Include="Rules\SustanciasRules.cs" />
+<Compile Include="Controllers\Tiempo_PadecimientoController.cs" />
+<Compile Include="Rules\Tiempo_PadecimientoRules.cs" />
+<Compile Include="Controllers\Tiempos_de_ComidaController.cs" />
+<Compile Include="Rules\Tiempos_de_ComidaRules.cs" />
+<Compile Include="Controllers\Tipo_de_DietaController.cs" />
+<Compile Include="Rules\Tipo_de_DietaRules.cs" />
+<Compile Include="Controllers\Tipo_de_RegistroController.cs" />
+<Compile Include="Rules\Tipo_de_RegistroRules.cs" />
+<Compile Include="Controllers\Tipo_EjercicioController.cs" />
+<Compile Include="Rules\Tipo_EjercicioRules.cs" />
+<Compile Include="Controllers\Tipo_Modificacion_AlimentosController.cs" />
+<Compile Include="Rules\Tipo_Modificacion_AlimentosRules.cs" />
+<Compile Include="Controllers\Tipo_PacienteController.cs" />
+<Compile Include="Rules\Tipo_PacienteRules.cs" />
+<Compile Include="Controllers\Unidades_de_MedidaController.cs" />
+<Compile Include="Rules\Unidades_de_MedidaRules.cs" />
+<Compile Include="Controllers\ConsultasController.cs" />
+<Compile Include="Controllers\EstatusController.cs" />
+<Compile Include="Controllers\ProfesionesController.cs" />
+<Compile Include="Controllers\EspecialidadesController.cs" />
+<Compile Include="Controllers\Detalle_Identificacion_Oficial_MedicosController.cs" />
+<Compile Include="Controllers\Identificaciones_OficialesController.cs" />
+<Compile Include="Controllers\Regimenes_FiscalesController.cs" />
+<Compile Include="Controllers\Interpretacion_de_porcentaje_de_grasa_corporalController.cs" />
+<Compile Include="Controllers\Interpretacion_IMCController.cs" />
+<Compile Include="Controllers\Interpretacion_corporalController.cs" />
+<Compile Include="Controllers\Interpretacion_distribucion_grasa_corporalController.cs" />
+<Compile Include="Controllers\Interpretacion_indice_cintura__caderaController.cs" />
+<Compile Include="Controllers\Interpretacion_consumo_de_aguaController.cs" />
+<Compile Include="Controllers\Interpretacion_Frecuencia_cardiaca_en_EsfuerzoController.cs" />
+<Compile Include="Controllers\Interpretacion_Dificultad_de_Rutina_de_EjerciciosController.cs" />
+<Compile Include="Controllers\Interpretacion_CaloriasController.cs" />
+<Compile Include="Controllers\Tipo_de_Plan_de_SuscripcionController.cs" />
+<Compile Include="Controllers\Duracion_de_Planes_de_SuscripcionController.cs" />
+<Compile Include="Controllers\Planes_de_SuscripcionController.cs" />
+<Compile Include="Controllers\Estatus_por_SuscripcionController.cs" />
+<Compile Include="Controllers\Detalle_Suscripciones_PacienteController.cs" />
+<Compile Include="Controllers\Detalle_Pagos_PacienteController.cs" />
+<Compile Include="Controllers\Estatus_de_SuscripcionController.cs" />
+<Compile Include="Controllers\Estatus_de_PagoController.cs" />
+<Compile Include="Controllers\Formas_de_PagoController.cs" />
+<Compile Include="Controllers\Frecuencia_de_pago_PacientesController.cs" />
+<Compile Include="Controllers\Frecuencia_de_pago_EmpresasController.cs" />
+<Compile Include="Controllers\Detalle_Resultados_ConsultasController.cs" />
+<Compile Include="Controllers\Indicadores_ConsultasController.cs" />
+<Compile Include="Controllers\Tipos_de_EspecialistasController.cs" />
+<Compile Include="Controllers\Detalle_Titulos_MedicosController.cs" />
+<Compile Include="Controllers\areas_EmpresasController.cs" />
+<Compile Include="Controllers\Detalle_Suscripciones_EmpresaController.cs" />
+<Compile Include="Controllers\Detalle_Pagos_EmpresaController.cs" />
+<Compile Include="Controllers\Detalle_Contactos_EmpresaController.cs" />
+<Compile Include="Controllers\Detalle_Contratos_EmpresaController.cs" />
+<Compile Include="Controllers\Tipos_de_ContratoController.cs" />
+<Compile Include="Controllers\Detalle_Codigos_ReferidosController.cs" />
+<Compile Include="Controllers\Detalle_Convenio_Medicos_AseguradorasController.cs" />
+<Compile Include="Controllers\AseguradorasController.cs" />
+<Compile Include="Controllers\Detalle_Planes_de_Suscripcion_EspecialistasController.cs" />
+<Compile Include="Controllers\Datos_Bancarios_EspecialistasController.cs" />
+<Compile Include="Controllers\Detalle_Pagos_EspecialistasController.cs" />
+<Compile Include="Controllers\Planes_de_Suscripcion_EspecialistasController.cs" />
+<Compile Include="Controllers\Frecuencia_de_pago_EspecialistasController.cs" />
+<Compile Include="Controllers\BancosController.cs" />
+<Compile Include="Controllers\EventosController.cs" />
+<Compile Include="Controllers\Detalle_Actividades_EventoController.cs" />
+<Compile Include="Controllers\Estatus_Actividades_EventoController.cs" />
+<Compile Include="Controllers\Estatus_Reservaciones_ActividadController.cs" />
+<Compile Include="Controllers\Tipos_de_ActividadesController.cs" />
+<Compile Include="Controllers\Ubicaciones_Eventos_EmpresaController.cs" />
+<Compile Include="Controllers\Actividades_del_EventoController.cs" />
+<Compile Include="Controllers\Detalle_Horarios_ActividadController.cs" />
+<Compile Include="Controllers\Parentescos_EmpleadosController.cs" />
+<Compile Include="Controllers\Registro_en_EventoController.cs" />
+<Compile Include="Controllers\Detalle_Consulta_Actividades_Registro_EventoController.cs" />
+<Compile Include="Controllers\Detalle_Registro_en_Actividad_EventoController.cs" />
+<Compile Include="Controllers\Estatus_EventosController.cs" />
+<Compile Include="Controllers\MS_Exclusion_Ingredientes_PacienteController.cs" />
+<Compile Include="Controllers\Detalle_Especialistas_PacientesController.cs" />
+<Compile Include="Controllers\Detalle_Facturacion_EspecialistasController.cs" />
+<Compile Include="Controllers\Estatus_FacturasController.cs" />
+<Compile Include="Controllers\Titulos_PersonalesController.cs" />
+<Compile Include="Controllers\Detalle_Redes_Sociales_EspecialistaController.cs" />
+<Compile Include="Controllers\Redes_socialesController.cs" />
+<Compile Include="Controllers\MS_Suscripciones_Codigos_Referidos_EspecialistaController.cs" />
+<Compile Include="Controllers\MotivosController.cs" />
+<Compile Include="Controllers\Solicitud_de_Cita_con_EspecialistaController.cs" />
+<Compile Include="Controllers\CalificacionController.cs" />
+<Compile Include="Controllers\Asuntos_Asistencia_TelefonicaController.cs" />
+<Compile Include="Controllers\Estatus_LlamadasController.cs" />
+<Compile Include="Controllers\Registro_de_Asistencia_TelefonicaController.cs" />
+<Compile Include="Controllers\Detalle_Registro_Beneficiarios_EmpresaController.cs" />
+<Compile Include="Controllers\Tipos_de_EmpresaController.cs" />
+<Compile Include="Controllers\Detalle_Caracteristicas_IngredienteController.cs" />
+<Compile Include="Controllers\Tipo_de_comida_platillosController.cs" />
+<Compile Include="Controllers\Caracteristicas_platilloController.cs" />
+<Compile Include="Controllers\Detalle_PlatillosController.cs" />
+<Compile Include="Controllers\Cantidad_fraccion_platillosController.cs" />
+<Compile Include="Controllers\Pantalla_FranciscoController.cs" />
+<Compile Include="Controllers\Detalle_pantalla_FranciscoController.cs" />
+<Compile Include="Controllers\Tips_y_PromocionesController.cs" />
+<Compile Include="Controllers\Planes_AlimenticiosController.cs" />
+<Compile Include="Controllers\Detalle_Planes_AlimenticiosController.cs" />
+<Compile Include="Controllers\Planes_de_RutinasController.cs" />
+<Compile Include="Controllers\Detalle_Planes_de_RutinasController.cs" />
+<Compile Include="Controllers\RutinasController.cs" />
+<Compile Include="Controllers\Nivel_de_dificultadController.cs" />
+<Compile Include="Controllers\Nivel_de_IntensidadController.cs" />
+<Compile Include="Controllers\Detalle_Ejercicios_RutinasController.cs" />
+<Compile Include="Controllers\MusculosController.cs" />
+<Compile Include="Controllers\Equipamiento_para_EjerciciosController.cs" />
+<Compile Include="Controllers\MS_MusculosController.cs" />
+<Compile Include="Controllers\MS_Equipamiento_para_EjerciciosController.cs" />
+<Compile Include="Controllers\VendedoresController.cs" />
+<Compile Include="Controllers\Detalle_Codigos_de_Referencia_VendedoresController.cs" />
+<Compile Include="Controllers\Detalle_Facturacion_VendedoresController.cs" />
+<Compile Include="Controllers\ProveedoresController.cs" />
+<Compile Include="Controllers\Tipo_de_proveedorController.cs" />
+<Compile Include="Controllers\Detalle_Sucursales_ProveedoresController.cs" />
+<Compile Include="Controllers\Tipo_de_SucursalController.cs" />
+<Compile Include="Controllers\Detalle_Suscripcion_Red_de_Especialistas_ProveedoresController.cs" />
+<Compile Include="Controllers\Planes_de_Suscripcion_ProveedoresController.cs" />
+<!--@@INCLUDE@@-->
+ <Compile Include="Global.asax.cs">
+ <DependentUpon>Global.asax</DependentUpon>
+ </Compile>
+ <Compile Include="GlobalConfiguration.cs" />
+ <Compile Include="Helpers\ApiResponse.cs" />
+ <Compile Include="Helpers\BitacoraHelper.cs" />
+ <Compile Include="Helpers\General.cs" />
+ <Compile Include="Helpers\GeneralHelper.cs" />
+ <Compile Include="Helpers\RestApiHelper.cs" />
+ <Compile Include="Helpers\Utility.cs" />
+ <Compile Include="Infrastructure\ApplicationDbContext.cs" />
+ <Compile Include="Infrastructure\ApplicationRole.cs" />
+ <Compile Include="Infrastructure\ApplicationRoleManager.cs" />
+ <Compile Include="Infrastructure\ApplicationUser.cs" />
+ <Compile Include="Infrastructure\ApplicationUserManager.cs" />
+ <Compile Include="Infrastructure\ClaimsAuthorizationAttribute.cs" />
+ <Compile Include="Infrastructure\ExtendedClaimsProvider.cs" />
+ <Compile Include="Infrastructure\RolesFromClaims.cs" />
+ <Compile Include="Migrations\Configuration.cs" />
+ <Compile Include="Models\AccountBindingModels.cs" />
+ <Compile Include="Models\ClaimBindingModel.cs" />
+ <Compile Include="Models\ModelFactory.cs" />
+ <Compile Include="Models\RoleBindingModels.cs" />
+ <Compile Include="Properties\AssemblyInfo.cs" />
+ <Compile Include="Providers\CustomJwtFormat.cs" />
+ <Compile Include="Providers\CustomOAuthProvider.cs" />
+ <Compile Include="Startup.cs" />
+ </ItemGroup>
+ <ItemGroup>
+ <Content Include="packages.config" />
+ <Content Include="Areas\HelpPage\Views\Web.config" />
+ <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+ <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
+ <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+ <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+ <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml" />
+ <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+ <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+ <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml" />
+ <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml" />
+ <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+ <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+ <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+ <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml" />
+ <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml" />
+ <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml" />
+ <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
+ <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+ <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+ <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+ <None Include="Properties\PublishProfiles\Spartane.pubxml" />
+ <None Include="Properties\PublishProfiles\WebApi.pubxml" />
+ <None Include="Web.Debug.config">
+ <DependentUpon>Web.config</DependentUpon>
+ </None>
+ <None Include="Web.Release.config">
+ <DependentUpon>Web.config</DependentUpon>
+ </None>
+ </ItemGroup>
+ <ItemGroup>
+ <Folder Include="Certificates\" />
+ </ItemGroup>
+ <ItemGroup>
+ <ProjectReference Include="..\Spartane.Core\Spartane.Core.csproj">
+ <Project>{f56309fb-9e43-42e5-a65d-4aaa70f95c9b}</Project>
+ <Name>Spartane.Core</Name>
+ </ProjectReference>
+ <ProjectReference Include="..\Spartane.Data\Spartane.Data.csproj">
+ <Project>{63f55cc4-7b31-4195-91ee-3a5c31b9c0fc}</Project>
+ <Name>Spartane.Data</Name>
+ </ProjectReference>
+ <ProjectReference Include="..\Spartane.Services\Spartane.Services.csproj">
+ <Project>{7e1dd863-3658-407f-a096-db0276b52201}</Project>
+ <Name>Spartane.Services</Name>
+ </ProjectReference>
+ <ProjectReference Include="..\Spartane.Tools\Spartane.Tools.csproj">
+ <Project>{fbcda8c2-0a55-45a7-8977-f5bc2ab7c440}</Project>
+ <Name>Spartane.Tools</Name>
+ </ProjectReference>
+ </ItemGroup>
+ <PropertyGroup>
+ <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+ <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+ </PropertyGroup>
+ <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+ <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+ <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+ <ProjectExtensions>
+ <VisualStudio>
+ <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+ <WebProjectProperties>
+ <UseIIS>True</UseIIS>
+ <AutoAssignPort>True</AutoAssignPort>
+ <DevelopmentServerPort>57620</DevelopmentServerPort>
+ <DevelopmentServerVPath>/</DevelopmentServerVPath>
+ <IISUrl>http://localhost:9018/</IISUrl>
+ <NTLMAuthentication>False</NTLMAuthentication>
+ <UseCustomServer>False</UseCustomServer>
+ <CustomServerUrl>
+ </CustomServerUrl>
+ <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+ </WebProjectProperties>
+ </FlavorProperties>
+ </VisualStudio>
+ </ProjectExtensions>
+ <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+ <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+ <PropertyGroup>
+ <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them. For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+ </PropertyGroup>
+ <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+ </Target>
+ <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+ Other similar extension points exist, see Microsoft.Common.targets.
+ <Target Name="BeforeBuild">
+ </Target>
+ <Target Name="AfterBuild">
+ </Target>
+ -->
+</Project>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

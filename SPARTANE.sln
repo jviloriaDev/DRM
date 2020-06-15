@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Web
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{8B63884A-25F6-45DC-8D29-03F8922D90BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spartane.Core", "Spartane.Core\Spartane.Core.csproj", "{F56309FB-9E43-42E5-A65D-4AAA70F95C9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spartane.Data", "Spartane.Data\Spartane.Data.csproj", "{63F55CC4-7B31-4195-91EE-3A5C31B9C0FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spartane.Services", "Spartane.Services\Spartane.Services.csproj", "{7E1DD863-3658-407F-A096-DB0276B52201}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "oAuthServices", "oAuthServices", "{F6957465-2C50-4D66-8D48-0DEA78F8CC3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "oAuth.WebApi", "oAuth.WebApi\oAuth.WebApi.csproj", "{12BD72A4-42E8-427D-B94E-89F10BE694FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spartane.Tools", "Spartane.Tools\Spartane.Tools.csproj", "{FBCDA8C2-0A55-45A7-8977-F5BC2AB7C440}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F56309FB-9E43-42E5-A65D-4AAA70F95C9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F56309FB-9E43-42E5-A65D-4AAA70F95C9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F56309FB-9E43-42E5-A65D-4AAA70F95C9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F56309FB-9E43-42E5-A65D-4AAA70F95C9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63F55CC4-7B31-4195-91EE-3A5C31B9C0FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63F55CC4-7B31-4195-91EE-3A5C31B9C0FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63F55CC4-7B31-4195-91EE-3A5C31B9C0FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63F55CC4-7B31-4195-91EE-3A5C31B9C0FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E1DD863-3658-407F-A096-DB0276B52201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E1DD863-3658-407F-A096-DB0276B52201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E1DD863-3658-407F-A096-DB0276B52201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E1DD863-3658-407F-A096-DB0276B52201}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12BD72A4-42E8-427D-B94E-89F10BE694FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12BD72A4-42E8-427D-B94E-89F10BE694FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12BD72A4-42E8-427D-B94E-89F10BE694FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12BD72A4-42E8-427D-B94E-89F10BE694FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBCDA8C2-0A55-45A7-8977-F5BC2AB7C440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBCDA8C2-0A55-45A7-8977-F5BC2AB7C440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBCDA8C2-0A55-45A7-8977-F5BC2AB7C440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBCDA8C2-0A55-45A7-8977-F5BC2AB7C440}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F56309FB-9E43-42E5-A65D-4AAA70F95C9B} = {8B63884A-25F6-45DC-8D29-03F8922D90BA}
+		{63F55CC4-7B31-4195-91EE-3A5C31B9C0FC} = {8B63884A-25F6-45DC-8D29-03F8922D90BA}
+		{7E1DD863-3658-407F-A096-DB0276B52201} = {8B63884A-25F6-45DC-8D29-03F8922D90BA}
+		{12BD72A4-42E8-427D-B94E-89F10BE694FD} = {F6957465-2C50-4D66-8D48-0DEA78F8CC3E}
+		{FBCDA8C2-0A55-45A7-8977-F5BC2AB7C440} = {8B63884A-25F6-45DC-8D29-03F8922D90BA}
+	EndGlobalSection
+EndGlobal

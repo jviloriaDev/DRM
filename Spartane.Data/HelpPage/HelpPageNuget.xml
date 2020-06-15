@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Spartane.Data</name>
+    </assembly>
+    <members>
+        <member name="T:Spartane.Data.EF.EFRepository`1">
+            <summary>
+            Entity Framework repository
+            </summary>
+        </member>
+        <member name="M:Spartane.Data.EF.EFRepository`1.#ctor(Spartane.Data.EF.IDbContext)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="context">Object context</param>
+        </member>
+        <member name="M:Spartane.Data.EF.EFRepository`1.GetById(System.Object)">
+            <summary>
+            Get entity by identifier
+            </summary>
+            <param name="id">Identifier</param>
+            <returns>Entity</returns>
+        </member>
+        <member name="M:Spartane.Data.EF.EFRepository`1.Insert(`0)">
+            <summary>
+            Insert entity
+            </summary>
+            <param name="entity">Entity</param>
+        </member>
+        <member name="M:Spartane.Data.EF.EFRepository`1.Insert(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Insert entities
+            </summary>
+            <param name="entities">Entities</param>
+        </member>
+        <member name="M:Spartane.Data.EF.EFRepository`1.Update(`0)">
+            <summary>
+            Update entity
+            </summary>
+            <param name="entity">Entity</param>
+        </member>
+        <member name="M:Spartane.Data.EF.EFRepository`1.Delete(`0)">
+            <summary>
+            Delete entity
+            </summary>
+            <param name="entity">Entity</param>
+        </member>
+        <member name="M:Spartane.Data.EF.EFRepository`1.Delete(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Delete entities
+            </summary>
+            <param name="entities">Entities</param>
+        </member>
+        <member name="P:Spartane.Data.EF.EFRepository`1.Table">
+            <summary>
+            Gets a table
+            </summary>
+        </member>
+        <member name="P:Spartane.Data.EF.EFRepository`1.TableNoTracking">
+            <summary>
+            Gets a table with "no tracking" enabled (EF feature) Use it only when you load record(s) only for read-only operations
+            </summary>
+        </member>
+        <member name="P:Spartane.Data.EF.EFRepository`1.Entities">
+            <summary>
+            Entities
+            </summary>
+        </member>
+        <member name="M:Spartane.Data.EF.IDbContext.Set``1">
+            <summary>
+            Get DbSet
+            </summary>
+            <typeparam name="TEntity">Entity type</typeparam>
+            <returns>DbSet</returns>
+        </member>
+        <member name="M:Spartane.Data.EF.IDbContext.SaveChanges">
+            <summary>
+            Save changes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Spartane.Data.EF.IDbContext.ExecuteStoredProcedureList``1(System.String,System.Object[])">
+            <summary>
+            Execute stores procedure and load a list of entities at the end
+            </summary>
+            <typeparam name="TEntity">Entity type</typeparam>
+            <param name="commandText">Command text</param>
+            <param name="parameters">Parameters</param>
+            <returns>Entities</returns>
+        </member>
+        <member name="M:Spartane.Data.EF.IDbContext.SqlQuery``1(System.String,System.Object[])">
+            <summary>
+            Creates a raw SQL query that will return elements of the given generic type.  The type can be any type that has properties that match the names of the columns returned from the query, or can be a simple primitive type. The type does not have to be an entity type. The results of this query are never tracked by the context even if the type of object returned is an entity type.
+            </summary>
+            <typeparam name="TElement">The type of object returned by the query.</typeparam>
+            <param name="sql">The SQL query string.</param>
+            <param name="parameters">The parameters to apply to the SQL query string.</param>
+            <returns>Result</returns>
+        </member>
+        <member name="M:Spartane.Data.EF.IDbContext.ExecuteSqlCommand(System.String,System.Boolean,System.Nullable{System.Int32},System.Object[])">
+            <summary>
+            Executes the given DDL/DML command against the database.
+            </summary>
+            <param name="sql">The command string</param>
+            <param name="doNotEnsureTransaction">false - the transaction creation is not ensured; true - the transaction creation is ensured.</param>
+            <param name="timeout">Timeout value, in seconds. A null value indicates that the default value of the underlying provider will be used</param>
+            <param name="parameters">The parameters to apply to the command string.</param>
+            <returns>The result returned by the database after executing the command.</returns>
+        </member>
+        <member name="M:Spartane.Data.EF.IDbContext.ExecuteRawSql(System.String)">
+            <summary>
+            Executes Raw SQL command against the database.
+            </summary>
+            <param name="query">The command string</param>
+            <returns>The result returned by the database after executing the command.</returns>
+        </member>
+        <member name="M:Spartane.Data.EF.IDbContext.ExecuteRawSql(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Executes Raw SQL command against the database.
+            </summary>
+            <param name="query">The command string</param>
+            <param name="parameters">parameters</param>
+            <returns>The result returned by the database after executing the command.</returns>
+        </member>
+        <member name="M:Spartane.Data.EF.SqlServerDataProvider.InitConnectionFactory">
+            <summary>
+            Initialize connection factory
+            </summary>
+        </member>
+        <member name="M:Spartane.Data.EF.SqlServerDataProvider.InitDatabase">
+            <summary>
+            Initialize database
+            </summary>
+        </member>
+        <member name="M:Spartane.Data.EF.SqlServerDataProvider.SetDatabaseInitializer">
+            <summary>
+            Set database initializer
+            </summary>
+        </member>
+        <member name="M:Spartane.Data.EF.SqlServerDataProvider.GetParameter">
+            <summary>
+            Gets a support database parameter object (used by stored procedures)
+            </summary>
+            <returns>Parameter</returns>
+        </member>
+        <member name="P:Spartane.Data.EF.SqlServerDataProvider.StoredProceduredSupported">
+            <summary>
+            A value indicating whether this data provider supports stored procedures
+            </summary>
+        </member>
+        <member name="T:Spartane.Data.EF.TTObjectContext">
+            <summary>
+            Object Context
+            </summary>
+        </member>
+        <member name="M:Spartane.Data.EF.TTObjectContext.AttachEntityToContext``1(``0)">
+            <summary>
+            Attach an entity to the context or return an already attached entity (if it was already attached)
+            </summary>
+            <typeparam name="TEntity">TEntity</typeparam>
+            <param name="entity">Entity</param>
+            <returns>Attached entity</returns>
+        </member>
+        <member name="M:Spartane.Data.EF.TTObjectContext.CreateDatabaseScript">
+            <summary>
+            Create database script
+            </summary>
+            <returns>SQL to generate database</returns>
+        </member>
+        <member name="M:Spartane.Data.EF.TTObjectContext.Set``1">
+            <summary>
+            Get DbSet
+            </summary>
+            <typeparam name="TEntity">Entity type</typeparam>
+            <returns>DbSet</returns>
+        </member>
+        <member name="M:Spartane.Data.EF.TTObjectContext.ExecuteStoredProcedureList``1(System.String,System.Object[])">
+            <summary>
+            Execute stores procedure and load a list of entities at the end
+            </summary>
+            <typeparam name="TEntity">Entity type</typeparam>
+            <param name="commandText">Command text</param>
+            <param name="parameters">Parameters</param>
+            <returns>Entities</returns>
+        </member>
+        <member name="M:Spartane.Data.EF.TTObjectContext.SqlQuery``1(System.String,System.Object[])">
+            <summary>
+            Creates a raw SQL query that will return elements of the given generic type.  The type can be any type that has properties that match the names of the columns returned from the query, or can be a simple primitive type. The type does not have to be an entity type. The results of this query are never tracked by the context even if the type of object returned is an entity type.
+            </summary>
+            <typeparam name="TElement">The type of object returned by the query.</typeparam>
+            <param name="sql">The SQL query string.</param>
+            <param name="parameters">The parameters to apply to the SQL query string.</param>
+            <returns>Result</returns>
+        </member>
+        <member name="M:Spartane.Data.EF.TTObjectContext.ExecuteSqlCommand(System.String,System.Boolean,System.Nullable{System.Int32},System.Object[])">
+            <summary>
+            Executes the given DDL/DML command against the database.
+            </summary>
+            <param name="sql">The command string</param>
+            <param name="doNotEnsureTransaction">false - the transaction creation is not ensured; true - the transaction creation is ensured.</param>
+            <param name="timeout">Timeout value, in seconds. A null value indicates that the default value of the underlying provider will be used</param>
+            <param name="parameters">The parameters to apply to the command string.</param>
+            <returns>The result returned by the database after executing the command.</returns>
+        </member>
+        <member name="M:Spartane.Data.EF.TTObjectContext.ExecuteRawSql(System.String)">
+            <summary>
+            Executes Raw SQL command against the database.
+            </summary>
+            <param name="query">The command string</param>
+            <returns>The result returned by the database after executing the command.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+ <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+ <PropertyGroup>
+ <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+ <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+ <ProjectGuid>{63F55CC4-7B31-4195-91EE-3A5C31B9C0FC}</ProjectGuid>
+ <OutputType>Library</OutputType>
+ <AppDesignerFolder>Properties</AppDesignerFolder>
+ <RootNamespace>Spartane.Data</RootNamespace>
+ <AssemblyName>Spartane.Data</AssemblyName>
+ <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+ <FileAlignment>512</FileAlignment>
+ <SccProjectName>SAK</SccProjectName>
+ <SccLocalPath>SAK</SccLocalPath>
+ <SccAuxPath>SAK</SccAuxPath>
+ <SccProvider>SAK</SccProvider>
+ <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+ <RestorePackages>true</RestorePackages>
+ </PropertyGroup>
+ <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+ <DebugSymbols>true</DebugSymbols>
+ <DebugType>full</DebugType>
+ <Optimize>false</Optimize>
+ <OutputPath>bin\Debug\</OutputPath>
+ <DefineConstants>DEBUG;TRACE</DefineConstants>
+ <ErrorReport>prompt</ErrorReport>
+ <WarningLevel>4</WarningLevel>
+ </PropertyGroup>
+ <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+ <DebugType>pdbonly</DebugType>
+ <Optimize>true</Optimize>
+ <OutputPath>bin\Release\</OutputPath>
+ <DefineConstants>TRACE</DefineConstants>
+ <ErrorReport>prompt</ErrorReport>
+ <WarningLevel>4</WarningLevel>
+ </PropertyGroup>
+ <ItemGroup>
+ <Reference Include="EntityFramework">
+ <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+ </Reference>
+ <Reference Include="EntityFramework.SqlServer">
+ <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+ </Reference>
+ <Reference Include="System" />
+ <Reference Include="System.ComponentModel.DataAnnotations" />
+ <Reference Include="System.Core" />
+ <Reference Include="System.Runtime.Serialization" />
+ <Reference Include="System.Security" />
+ <Reference Include="System.Xml.Linq" />
+ <Reference Include="System.Data.DataSetExtensions" />
+ <Reference Include="Microsoft.CSharp" />
+ <Reference Include="System.Data" />
+ <Reference Include="System.Xml" />
+ </ItemGroup>
+ <ItemGroup>
+ <Compile Include="EF\EFDataProviderManager.cs" />
+ <Compile Include="EF\EFRepository.cs" />
+ <Compile Include="EF\IDbContext.cs" />
+ <Compile Include="EF\Mapping\Business_Rule_Creation\Business_Rule_CreationMap.cs" />
+ <Compile Include="EF\Mapping\Dashboard_Config_Detail\Dashboard_Config_DetailMap.cs" />
+ <Compile Include="EF\Mapping\Dashboard_Editor\Dashboard_EditorMap.cs" />
+ <Compile Include="EF\Mapping\Dashboard_Status\Dashboard_StatusMap.cs" />
+ <Compile Include="EF\Mapping\SpartanChangePasswordAutorizationEstatus\SpartanChangePasswordAutorizationEstatusMap.cs" />
+ <Compile Include="EF\Mapping\SpartanObject\SpartanObjectMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Additional_Menu\Spartan_Additional_Menu.cs" />
+ <Compile Include="EF\Mapping\Spartan_Attribute_Control_Type\Spartan_Attribute_Control_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Attribute_Type\Spartan_Attribute_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Bitacora_SQL\Spartan_Bitacora_SQLMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Actions_False_Detail\Spartan_BR_Actions_False_DetailMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Actions_True_Detail\Spartan_BR_Actions_True_DetailMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Action\Spartan_BR_ActionMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Action_Classification\Spartan_BR_Action_ClassificationMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Action_Configuration_Detail\Spartan_BR_Action_Configuration_DetailMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Action_Param_Type\Spartan_BR_Action_Param_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Action_Result\Spartan_BR_Action_ResultMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Attribute_Restrictions_Detail\Spartan_BR_Attribute_Restrictions_DetailMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Complexity\Spartan_BR_ComplexityMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Conditions_Detail\Spartan_BR_Conditions_DetailMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Condition\Spartan_BR_ConditionMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Condition_Operator\Spartan_BR_Condition_OperatorMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Event_Restrictions_Detail\Spartan_BR_Event_Restrictions_DetailMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_History\Spartan_BR_HistoryMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Modifications_Log\Spartan_BR_Modifications_LogMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Operation\Spartan_BR_OperationMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Operation_Detail\Spartan_BR_Operation_DetailMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Operation_Restrictions_Detail\Spartan_BR_Operation_Restrictions_DetailMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Operator_Type\Spartan_BR_Operator_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Peer_Review\Spartan_BR_Peer_ReviewMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Presentation_Control_Type\Spartan_BR_Presentation_Control_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Process_Event\Spartan_BR_Process_EventMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Process_Event_Detail\Spartan_BR_Process_Event_DetailMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Rejection_Reason\Spartan_BR_Rejection_ReasonMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Scope\Spartan_BR_ScopeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Scope_Detail\Spartan_BR_Scope_DetailMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Status\Spartan_BR_StatusMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Testing\Spartan_BR_TestingMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_BR_Type_History\Spartan_BR_Type_HistoryMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Business_Rule\Spartan_Business_RuleMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_ChangePasswordAutorization\Spartan_ChangePasswordAutorizationMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Control_Type\Spartan_Control_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Event_Type\Spartan_Event_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartane_File\Spartane_FileMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Format\Spartan_FormatMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Format_Configuration\Spartan_Format_ConfigurationMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Format_Field\Spartan_Format_FieldMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Format_Permissions\Spartan_Format_PermissionsMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Format_Permission_Type\Spartan_Format_Permission_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Format_Type\Spartan_Format_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Function\Spartan_FunctionMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Function_Characteristic\Spartan_Function_CharacteristicMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Function_Characteristic_Config\Spartan_Function_Characteristic_ConfigMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Function_Event\Spartan_Function_EventMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Function_Status\Spartan_Function_StatusMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Function_Type\Spartan_Function_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Function_Type_Status\Spartan_Function_Type_StatusMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Language_Text\Spartan_Language_TextMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Layout_Status\Spartan_Layout_StatusMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Menu_Orientation\Spartan_Menu_OrientationMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Menu_Style\Spartan_Menu_StyleMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Metadata\Spartan_MetadataMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Method_Clasification\Spartan_Method_ClasificationMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Method_Type\Spartan_Method_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Method_Type_Function\Spartan_Method_Type_FunctionMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Method_Type_Status\Spartan_Method_Type_StatusMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Module\Spartan_ModuleMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Module_Config\Spartan_Module_ConfigMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Module_Object\Spartan_Module_ObjectMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Module_Object_Characteristic\Spartan_Module_Object_CharacteristicMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Module_Object_Method\Spartan_Module_Object_MethodMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Module_Status\Spartan_Module_StatusMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Notice\Spartan_NoticeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Notice_Status\Spartan_Notice_StatusMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Notice_Type\Spartan_Notice_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Object\Spartan_ObjectMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Object_Characteristic\Spartan_Object_CharacteristicMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Object_Config\Spartan_Object_ConfigMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Object_Method\Spartan_Object_MethodMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Object_Method_Characteristic\Spartan_Object_Method_CharacteristicMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Object_Method_Status\Spartan_Object_Method_StatusMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Object_Path\Spartan_Object_PathMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Object_Status\Spartan_Object_StatusMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Object_Type\Spartan_Object_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Order_Type\Spartan_Order_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Report\Spartan_ReportMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Report_Advance_Filter\Spartan_Report_Advance_FilterMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Report_Fields_Detail\Spartan_Report_Fields_DetailMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Report_Field_Type\Spartan_Report_Field_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Report_Format\Spartan_Report_FormatMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Report_Function\Spartan_Report_FunctionMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Report_Order_Type\Spartan_Report_Order_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Report_Permissions\Spartan_Report_PermissionsMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Report_Permission_Type\Spartan_Report_Permission_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Report_Presentation_Type\Spartan_Report_Presentation_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Report_Presentation_View\Spartan_Report_Presentation_ViewMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Report_Status\Spartan_Report_StatusMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Security_Event_Result\Spartan_Security_Event_ResultMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Security_Event_Type\Spartan_Security_Event_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Security_Log\Spartan_Security_LogMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Session_Event_Type\Spartan_Session_Event_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Session_Log\Spartan_Session_LogMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_System\Spartan_SystemMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_System_Language\Spartan_System_LanguageMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_System_Layout\Spartan_System_LayoutMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Token_Type\Spartan_Token_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Traduction_Concept_Type\Spartan_Traduction_Concept_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Traduction_Detail\Spartan_Traduction_DetailMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Traduction_Language\Spartan_Traduction_LanguageMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Traduction_Object\Spartan_Traduction_ObjectMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Traduction_Object_Type\Spartan_Traduction_Object_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Traduction_Process\Spartan_Traduction_ProcessMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Traduction_Process_Data\Spartan_Traduction_Process_DataMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Traduction_Process_Workflow\Spartan_Traduction_Process_WorkflowMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Transaction_Log\Spartan_Transaction_LogMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Transition_Event_Type\Spartan_Transition_Event_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_Transition_Log_Type\Spartan_Transition_Log_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_User\Spartan_UserMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_User_Alert\Spartan_User_AlertMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_User_Alert_Status\Spartan_User_Alert_StatusMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_User_Alert_Type\Spartan_User_Alert_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_User_Favorite_List\Spartan_User_Favorite_ListMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_User_Favorite_Object\Spartan_User_Favorite_ObjectMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_User_Historical_Password\Spartan_User_Historical_PasswordMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_User_Most_Used_Object\Spartan_User_Most_Used_ObjectMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_User_Object_Method_Config\Spartan_User_Object_Method_ConfigMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_User_Quicklink\Spartan_User_QuicklinkMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_User_Role\Spartan_User_RoleMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_User_Role_Status\Spartan_User_Role_StatusMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_User_Rule_Module\Spartan_User_Rule_ModuleMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_User_Rule_Module_Object\Spartan_User_Rule_Module_ObjectMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_User_Rule_Object_Function\Spartan_User_Rule_Object_FunctionMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_User_Status\Spartan_User_StatusMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_WorkFlow\Spartan_WorkFlowMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_WorkFlow_Conditions_by_State\Spartan_WorkFlow_Conditions_by_StateMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_WorkFlow_Condition\Spartan_WorkFlow_ConditionMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_WorkFlow_Condition_Operator\Spartan_WorkFlow_Condition_OperatorMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_WorkFlow_Information_by_State\Spartan_WorkFlow_Information_by_StateMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_WorkFlow_Matrix_of_States\Spartan_WorkFlow_Matrix_of_StatesMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_WorkFlow_Operator\Spartan_WorkFlow_OperatorMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_WorkFlow_Phases\Spartan_WorkFlow_PhasesMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_WorkFlow_Phase_Status\Spartan_WorkFlow_Phase_StatusMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_WorkFlow_Phase_Type\Spartan_WorkFlow_Phase_TypeMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_WorkFlow_Roles_by_State\Spartan_WorkFlow_Roles_by_StateMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_WorkFlow_State\Spartan_WorkFlow_StateMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_WorkFlow_Status\Spartan_WorkFlow_StatusMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_WorkFlow_Type_Flow_Control\Spartan_WorkFlow_Type_Flow_ControlMap.cs" />
+ <Compile Include="EF\Mapping\Spartan_WorkFlow_Type_Work_Distribution\Spartan_WorkFlow_Type_Work_DistributionMap.cs" />
+ <Compile Include="EF\Mapping\Template_Dashboard_Detail\Template_Dashboard_DetailMap.cs" />
+ <Compile Include="EF\Mapping\Template_Dashboard_Editor\Template_Dashboard_EditorMap.cs" />
+ <Compile Include="EF\SQLServerDataProvider.cs" />
+ <Compile Include="EF\TTObjectContext.cs" />
+ <Compile Include="Properties\AssemblyInfo.cs" />
+ <Compile Include="EF\Mapping\Antiguedad_Ejercicios\Antiguedad_EjerciciosMap.cs" />
+<Compile Include="EF\Mapping\Bebidas\BebidasMap.cs" />
+<Compile Include="EF\Mapping\Calorias\CaloriasMap.cs" />
+<Compile Include="EF\Mapping\Cantidad_Comidas\Cantidad_ComidasMap.cs" />
+<Compile Include="EF\Mapping\Categorias_de_platillos\Categorias_de_platillosMap.cs" />
+<Compile Include="EF\Mapping\Clasificacion_Ingredientes\Clasificacion_IngredientesMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Antecedentes_Familiares\Detalle_Antecedentes_FamiliaresMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Antecedentes_No_Patologicos\Detalle_Antecedentes_No_PatologicosMap.cs" />
+<Compile Include="EF\Mapping\Detalle_de_Ingredientes\Detalle_de_IngredientesMap.cs" />
+<Compile Include="EF\Mapping\Detalle_de_Padecimientos\Detalle_de_PadecimientosMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Examenes_Laboratorio\Detalle_Examenes_LaboratorioMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Preferencia_Bebidas\Detalle_Preferencia_BebidasMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Terapia_Hormonal\Detalle_Terapia_HormonalMap.cs" />
+<Compile Include="EF\Mapping\Dias_de_la_semana\Dias_de_la_semanaMap.cs" />
+<Compile Include="EF\Mapping\Dificultad_de_platillos\Dificultad_de_platillosMap.cs" />
+<Compile Include="EF\Mapping\Duracion_Ejercicio\Duracion_EjercicioMap.cs" />
+<Compile Include="EF\Mapping\Ejercicios\EjerciciosMap.cs" />
+<Compile Include="EF\Mapping\Empresas\EmpresasMap.cs" />
+<Compile Include="EF\Mapping\Enfermedades\EnfermedadesMap.cs" />
+<Compile Include="EF\Mapping\Estado\EstadoMap.cs" />
+<Compile Include="EF\Mapping\Estado_Civil\Estado_CivilMap.cs" />
+<Compile Include="EF\Mapping\Estado_de_Animo\Estado_de_AnimoMap.cs" />
+<Compile Include="EF\Mapping\Estatus_Paciente\Estatus_PacienteMap.cs" />
+<Compile Include="EF\Mapping\Estatus_Padecimiento\Estatus_PadecimientoMap.cs" />
+<Compile Include="EF\Mapping\Frecuencia_Ejercicio\Frecuencia_EjercicioMap.cs" />
+<Compile Include="EF\Mapping\Frecuencia_Sustancias\Frecuencia_SustanciasMap.cs" />
+<Compile Include="EF\Mapping\Indicadores_Laboratorio\Indicadores_LaboratorioMap.cs" />
+<Compile Include="EF\Mapping\Ingredientes\IngredientesMap.cs" />
+<Compile Include="EF\Mapping\Marca\MarcaMap.cs" />
+<Compile Include="EF\Mapping\Medicos\MedicosMap.cs" />
+<Compile Include="EF\Mapping\Nivel_de_Satisfaccion\Nivel_de_SatisfaccionMap.cs" />
+<Compile Include="EF\Mapping\Objetivos\ObjetivosMap.cs" />
+<Compile Include="EF\Mapping\Pacientes\PacientesMap.cs" />
+<Compile Include="EF\Mapping\Padecimientos\PadecimientosMap.cs" />
+<Compile Include="EF\Mapping\Pais\PaisMap.cs" />
+<Compile Include="EF\Mapping\Parentesco\ParentescoMap.cs" />
+<Compile Include="EF\Mapping\Periodo_del_dia\Periodo_del_diaMap.cs" />
+<Compile Include="EF\Mapping\Platillos\PlatillosMap.cs" />
+<Compile Include="EF\Mapping\Preferencias_Entrecomidas\Preferencias_EntrecomidasMap.cs" />
+<Compile Include="EF\Mapping\Preferencias_Grasas\Preferencias_GrasasMap.cs" />
+<Compile Include="EF\Mapping\Preferencias_Preparacion\Preferencias_PreparacionMap.cs" />
+<Compile Include="EF\Mapping\Preferencias_Sal\Preferencias_SalMap.cs" />
+<Compile Include="EF\Mapping\Presentacion\PresentacionMap.cs" />
+<Compile Include="EF\Mapping\Rango_Consumo_Bebidas\Rango_Consumo_BebidasMap.cs" />
+<Compile Include="EF\Mapping\Rango_de_Horas\Rango_de_HorasMap.cs" />
+<Compile Include="EF\Mapping\Registro\RegistroMap.cs" />
+<Compile Include="EF\Mapping\Respuesta_Logica\Respuesta_LogicaMap.cs" />
+<Compile Include="EF\Mapping\Resultados_IMC\Resultados_IMCMap.cs" />
+<Compile Include="EF\Mapping\Seleccion_de_Rangos\Seleccion_de_RangosMap.cs" />
+<Compile Include="EF\Mapping\Sexo\SexoMap.cs" />
+<Compile Include="EF\Mapping\Suplementos\SuplementosMap.cs" />
+<Compile Include="EF\Mapping\Sustancias\SustanciasMap.cs" />
+<Compile Include="EF\Mapping\Tiempo_Padecimiento\Tiempo_PadecimientoMap.cs" />
+<Compile Include="EF\Mapping\Tiempos_de_Comida\Tiempos_de_ComidaMap.cs" />
+<Compile Include="EF\Mapping\Tipo_de_Dieta\Tipo_de_DietaMap.cs" />
+<Compile Include="EF\Mapping\Tipo_de_Registro\Tipo_de_RegistroMap.cs" />
+<Compile Include="EF\Mapping\Tipo_Ejercicio\Tipo_EjercicioMap.cs" />
+<Compile Include="EF\Mapping\Tipo_Modificacion_Alimentos\Tipo_Modificacion_AlimentosMap.cs" />
+<Compile Include="EF\Mapping\Tipo_Paciente\Tipo_PacienteMap.cs" />
+<Compile Include="EF\Mapping\Unidades_de_Medida\Unidades_de_MedidaMap.cs" />
+<Compile Include="EF\Mapping\Consultas\ConsultasMap.cs" />
+<Compile Include="EF\Mapping\Estatus\EstatusMap.cs" />
+<Compile Include="EF\Mapping\Profesiones\ProfesionesMap.cs" />
+<Compile Include="EF\Mapping\Especialidades\EspecialidadesMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Identificacion_Oficial_Medicos\Detalle_Identificacion_Oficial_MedicosMap.cs" />
+<Compile Include="EF\Mapping\Identificaciones_Oficiales\Identificaciones_OficialesMap.cs" />
+<Compile Include="EF\Mapping\Regimenes_Fiscales\Regimenes_FiscalesMap.cs" />
+<Compile Include="EF\Mapping\Interpretacion_de_porcentaje_de_grasa_corporal\Interpretacion_de_porcentaje_de_grasa_corporalMap.cs" />
+<Compile Include="EF\Mapping\Interpretacion_IMC\Interpretacion_IMCMap.cs" />
+<Compile Include="EF\Mapping\Interpretacion_corporal\Interpretacion_corporalMap.cs" />
+<Compile Include="EF\Mapping\Interpretacion_distribucion_grasa_corporal\Interpretacion_distribucion_grasa_corporalMap.cs" />
+<Compile Include="EF\Mapping\Interpretacion_indice_cintura__cadera\Interpretacion_indice_cintura__caderaMap.cs" />
+<Compile Include="EF\Mapping\Interpretacion_consumo_de_agua\Interpretacion_consumo_de_aguaMap.cs" />
+<Compile Include="EF\Mapping\Interpretacion_Frecuencia_cardiaca_en_Esfuerzo\Interpretacion_Frecuencia_cardiaca_en_EsfuerzoMap.cs" />
+<Compile Include="EF\Mapping\Interpretacion_Dificultad_de_Rutina_de_Ejercicios\Interpretacion_Dificultad_de_Rutina_de_EjerciciosMap.cs" />
+<Compile Include="EF\Mapping\Interpretacion_Calorias\Interpretacion_CaloriasMap.cs" />
+<Compile Include="EF\Mapping\Tipo_de_Plan_de_Suscripcion\Tipo_de_Plan_de_SuscripcionMap.cs" />
+<Compile Include="EF\Mapping\Duracion_de_Planes_de_Suscripcion\Duracion_de_Planes_de_SuscripcionMap.cs" />
+<Compile Include="EF\Mapping\Planes_de_Suscripcion\Planes_de_SuscripcionMap.cs" />
+<Compile Include="EF\Mapping\Estatus_por_Suscripcion\Estatus_por_SuscripcionMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Suscripciones_Paciente\Detalle_Suscripciones_PacienteMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Pagos_Paciente\Detalle_Pagos_PacienteMap.cs" />
+<Compile Include="EF\Mapping\Estatus_de_Suscripcion\Estatus_de_SuscripcionMap.cs" />
+<Compile Include="EF\Mapping\Estatus_de_Pago\Estatus_de_PagoMap.cs" />
+<Compile Include="EF\Mapping\Formas_de_Pago\Formas_de_PagoMap.cs" />
+<Compile Include="EF\Mapping\Frecuencia_de_pago_Pacientes\Frecuencia_de_pago_PacientesMap.cs" />
+<Compile Include="EF\Mapping\Frecuencia_de_pago_Empresas\Frecuencia_de_pago_EmpresasMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Resultados_Consultas\Detalle_Resultados_ConsultasMap.cs" />
+<Compile Include="EF\Mapping\Indicadores_Consultas\Indicadores_ConsultasMap.cs" />
+<Compile Include="EF\Mapping\Tipos_de_Especialistas\Tipos_de_EspecialistasMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Titulos_Medicos\Detalle_Titulos_MedicosMap.cs" />
+<Compile Include="EF\Mapping\areas_Empresas\areas_EmpresasMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Suscripciones_Empresa\Detalle_Suscripciones_EmpresaMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Pagos_Empresa\Detalle_Pagos_EmpresaMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Contactos_Empresa\Detalle_Contactos_EmpresaMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Contratos_Empresa\Detalle_Contratos_EmpresaMap.cs" />
+<Compile Include="EF\Mapping\Tipos_de_Contrato\Tipos_de_ContratoMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Codigos_Referidos\Detalle_Codigos_ReferidosMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Convenio_Medicos_Aseguradoras\Detalle_Convenio_Medicos_AseguradorasMap.cs" />
+<Compile Include="EF\Mapping\Aseguradoras\AseguradorasMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Planes_de_Suscripcion_Especialistas\Detalle_Planes_de_Suscripcion_EspecialistasMap.cs" />
+<Compile Include="EF\Mapping\Datos_Bancarios_Especialistas\Datos_Bancarios_EspecialistasMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Pagos_Especialistas\Detalle_Pagos_EspecialistasMap.cs" />
+<Compile Include="EF\Mapping\Planes_de_Suscripcion_Especialistas\Planes_de_Suscripcion_EspecialistasMap.cs" />
+<Compile Include="EF\Mapping\Frecuencia_de_pago_Especialistas\Frecuencia_de_pago_EspecialistasMap.cs" />
+<Compile Include="EF\Mapping\Bancos\BancosMap.cs" />
+<Compile Include="EF\Mapping\Eventos\EventosMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Actividades_Evento\Detalle_Actividades_EventoMap.cs" />
+<Compile Include="EF\Mapping\Estatus_Actividades_Evento\Estatus_Actividades_EventoMap.cs" />
+<Compile Include="EF\Mapping\Estatus_Reservaciones_Actividad\Estatus_Reservaciones_ActividadMap.cs" />
+<Compile Include="EF\Mapping\Tipos_de_Actividades\Tipos_de_ActividadesMap.cs" />
+<Compile Include="EF\Mapping\Ubicaciones_Eventos_Empresa\Ubicaciones_Eventos_EmpresaMap.cs" />
+<Compile Include="EF\Mapping\Actividades_del_Evento\Actividades_del_EventoMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Horarios_Actividad\Detalle_Horarios_ActividadMap.cs" />
+<Compile Include="EF\Mapping\Parentescos_Empleados\Parentescos_EmpleadosMap.cs" />
+<Compile Include="EF\Mapping\Registro_en_Evento\Registro_en_EventoMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Consulta_Actividades_Registro_Evento\Detalle_Consulta_Actividades_Registro_EventoMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Registro_en_Actividad_Evento\Detalle_Registro_en_Actividad_EventoMap.cs" />
+<Compile Include="EF\Mapping\Estatus_Eventos\Estatus_EventosMap.cs" />
+<Compile Include="EF\Mapping\MS_Exclusion_Ingredientes_Paciente\MS_Exclusion_Ingredientes_PacienteMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Especialistas_Pacientes\Detalle_Especialistas_PacientesMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Facturacion_Especialistas\Detalle_Facturacion_EspecialistasMap.cs" />
+<Compile Include="EF\Mapping\Estatus_Facturas\Estatus_FacturasMap.cs" />
+<Compile Include="EF\Mapping\Titulos_Personales\Titulos_PersonalesMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Redes_Sociales_Especialista\Detalle_Redes_Sociales_EspecialistaMap.cs" />
+<Compile Include="EF\Mapping\Redes_sociales\Redes_socialesMap.cs" />
+<Compile Include="EF\Mapping\MS_Suscripciones_Codigos_Referidos_Especialista\MS_Suscripciones_Codigos_Referidos_EspecialistaMap.cs" />
+<Compile Include="EF\Mapping\Motivos\MotivosMap.cs" />
+<Compile Include="EF\Mapping\Solicitud_de_Cita_con_Especialista\Solicitud_de_Cita_con_EspecialistaMap.cs" />
+<Compile Include="EF\Mapping\Calificacion\CalificacionMap.cs" />
+<Compile Include="EF\Mapping\Asuntos_Asistencia_Telefonica\Asuntos_Asistencia_TelefonicaMap.cs" />
+<Compile Include="EF\Mapping\Estatus_Llamadas\Estatus_LlamadasMap.cs" />
+<Compile Include="EF\Mapping\Registro_de_Asistencia_Telefonica\Registro_de_Asistencia_TelefonicaMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Registro_Beneficiarios_Empresa\Detalle_Registro_Beneficiarios_EmpresaMap.cs" />
+<Compile Include="EF\Mapping\Tipos_de_Empresa\Tipos_de_EmpresaMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Caracteristicas_Ingrediente\Detalle_Caracteristicas_IngredienteMap.cs" />
+<Compile Include="EF\Mapping\Tipo_de_comida_platillos\Tipo_de_comida_platillosMap.cs" />
+<Compile Include="EF\Mapping\Caracteristicas_platillo\Caracteristicas_platilloMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Platillos\Detalle_PlatillosMap.cs" />
+<Compile Include="EF\Mapping\Cantidad_fraccion_platillos\Cantidad_fraccion_platillosMap.cs" />
+<Compile Include="EF\Mapping\Pantalla_Francisco\Pantalla_FranciscoMap.cs" />
+<Compile Include="EF\Mapping\Detalle_pantalla_Francisco\Detalle_pantalla_FranciscoMap.cs" />
+<Compile Include="EF\Mapping\Tips_y_Promociones\Tips_y_PromocionesMap.cs" />
+<Compile Include="EF\Mapping\Planes_Alimenticios\Planes_AlimenticiosMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Planes_Alimenticios\Detalle_Planes_AlimenticiosMap.cs" />
+<Compile Include="EF\Mapping\Planes_de_Rutinas\Planes_de_RutinasMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Planes_de_Rutinas\Detalle_Planes_de_RutinasMap.cs" />
+<Compile Include="EF\Mapping\Rutinas\RutinasMap.cs" />
+<Compile Include="EF\Mapping\Nivel_de_dificultad\Nivel_de_dificultadMap.cs" />
+<Compile Include="EF\Mapping\Nivel_de_Intensidad\Nivel_de_IntensidadMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Ejercicios_Rutinas\Detalle_Ejercicios_RutinasMap.cs" />
+<Compile Include="EF\Mapping\Musculos\MusculosMap.cs" />
+<Compile Include="EF\Mapping\Equipamiento_para_Ejercicios\Equipamiento_para_EjerciciosMap.cs" />
+<Compile Include="EF\Mapping\MS_Musculos\MS_MusculosMap.cs" />
+<Compile Include="EF\Mapping\MS_Equipamiento_para_Ejercicios\MS_Equipamiento_para_EjerciciosMap.cs" />
+<Compile Include="EF\Mapping\Vendedores\VendedoresMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Codigos_de_Referencia_Vendedores\Detalle_Codigos_de_Referencia_VendedoresMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Facturacion_Vendedores\Detalle_Facturacion_VendedoresMap.cs" />
+<Compile Include="EF\Mapping\Proveedores\ProveedoresMap.cs" />
+<Compile Include="EF\Mapping\Tipo_de_proveedor\Tipo_de_proveedorMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Sucursales_Proveedores\Detalle_Sucursales_ProveedoresMap.cs" />
+<Compile Include="EF\Mapping\Tipo_de_Sucursal\Tipo_de_SucursalMap.cs" />
+<Compile Include="EF\Mapping\Detalle_Suscripcion_Red_de_Especialistas_Proveedores\Detalle_Suscripcion_Red_de_Especialistas_ProveedoresMap.cs" />
+<Compile Include="EF\Mapping\Planes_de_Suscripcion_Proveedores\Planes_de_Suscripcion_ProveedoresMap.cs" />
+<!--@@INCLUDE@@-->
+ </ItemGroup>
+ <ItemGroup>
+ <None Include="app.config" />
+ <None Include="ClassDiagram1.cd" />
+ <None Include="EF\App.config" />
+ <None Include="packages.config" />
+ </ItemGroup>
+ <ItemGroup>
+ <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+ </ItemGroup>
+ <ItemGroup>
+ <Folder Include="Models\" />
+ </ItemGroup>
+ <ItemGroup>
+ <ProjectReference Include="..\Spartane.Core\Spartane.Core.csproj">
+ <Project>{f56309fb-9e43-42e5-a65d-4aaa70f95c9b}</Project>
+ <Name>Spartane.Core</Name>
+ </ProjectReference>
+ </ItemGroup>
+ <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+ <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+ <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+ <PropertyGroup>
+ <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them. For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+ </PropertyGroup>
+ <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+ </Target>
+ <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+ Other similar extension points exist, see Microsoft.Common.targets.
+ <Target Name="BeforeBuild">
+ </Target>
+ <Target Name="AfterBuild">
+ </Target>
+ -->
+</Project>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

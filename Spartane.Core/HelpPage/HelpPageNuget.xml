@@ -1,0 +1,1528 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Spartane.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Spartane.Core.BaseEntity">
+            <summary>
+            Base class for entities
+            </summary>
+        </member>
+        <member name="P:Spartane.Core.BaseEntity.Id">
+            <summary>
+            Gets or sets the entity identifier
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Business_Rule_Creation.Business_Rule_Creation">
+            <summary>
+            Business_Rule_Creation table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Dashboard_Config_Detail.Dashboard_Config_Detail">
+            <summary>
+            Dashboard_Config_Detail table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Dashboard_Editor.Dashboard_Editor">
+            <summary>
+            Dashboard_Editor table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Dashboard_Status.Dashboard_Status">
+            <summary>
+            Dashboard_Status table
+            </summary>
+        </member>
+        <member name="M:Spartane.Core.Classes.IRepository`1.GetById(System.Object)">
+            <summary>
+            Get entity by identifier
+            </summary>
+            <param name="id">Identifier</param>
+            <returns>Entity</returns>
+        </member>
+        <member name="M:Spartane.Core.Classes.IRepository`1.Insert(`0)">
+            <summary>
+            Insert entity
+            </summary>
+            <param name="entity">Entity</param>
+        </member>
+        <member name="M:Spartane.Core.Classes.IRepository`1.Insert(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Insert entities
+            </summary>
+            <param name="entities">Entities</param>
+        </member>
+        <member name="M:Spartane.Core.Classes.IRepository`1.Update(`0)">
+            <summary>
+            Update entity
+            </summary>
+            <param name="entity">Entity</param>
+        </member>
+        <member name="M:Spartane.Core.Classes.IRepository`1.Delete(`0)">
+            <summary>
+            Delete entity
+            </summary>
+            <param name="entity">Entity</param>
+        </member>
+        <member name="M:Spartane.Core.Classes.IRepository`1.Delete(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Delete entities
+            </summary>
+            <param name="entities">Entities</param>
+        </member>
+        <member name="P:Spartane.Core.Classes.IRepository`1.Table">
+            <summary>
+            Gets a table
+            </summary>
+        </member>
+        <member name="P:Spartane.Core.Classes.IRepository`1.TableNoTracking">
+            <summary>
+            Gets a table with "no tracking" enabled (EF feature) Use it only when you load record(s) only for read-only operations
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.SpartanChangePasswordAutorizationEstatus.SpartanChangePasswordAutorizationEstatus">
+            <summary>
+            SpartanChangePasswordAutorizationEstatus table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.SpartaneFile.SpartaneFile">
+            <summary>
+            Spartane_File table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.SpartanObject.SpartanObject">
+            <summary>
+            SpartanObject table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Attribute_Control_Type.Spartan_Attribute_Control_Type">
+            <summary>
+            Spartan_Attribute_Control_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Attribute_Type.Spartan_Attribute_Type">
+            <summary>
+            Spartan_Attribute_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Bitacora_SQL.Spartan_Bitacora_SQL">
+            <summary>
+            Spartan_Bitacora_SQL table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Actions_False_Detail.Spartan_BR_Actions_False_Detail">
+            <summary>
+            Spartan_BR_Actions_False_Detail table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Actions_True_Detail.Spartan_BR_Actions_True_Detail">
+            <summary>
+            Spartan_BR_Actions_True_Detail table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Action.Spartan_BR_Action">
+            <summary>
+            Spartan_BR_Action table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Action_Classification.Spartan_BR_Action_Classification">
+            <summary>
+            Spartan_BR_Action_Classification table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Action_Configuration_Detail.Spartan_BR_Action_Configuration_Detail">
+            <summary>
+            Spartan_BR_Action_Configuration_Detail table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Action_Param_Type.Spartan_BR_Action_Param_Type">
+            <summary>
+            Spartan_BR_Action_Param_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Action_Result.Spartan_BR_Action_Result">
+            <summary>
+            Spartan_BR_Action_Result table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Attribute_Restrictions_Detail.Spartan_BR_Attribute_Restrictions_Detail">
+            <summary>
+            Spartan_BR_Attribute_Restrictions_Detail table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Complexity.Spartan_BR_Complexity">
+            <summary>
+            Spartan_BR_Complexity table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Conditions_Detail.Spartan_BR_Conditions_Detail">
+            <summary>
+            Spartan_BR_Conditions_Detail table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Condition.Spartan_BR_Condition">
+            <summary>
+            Spartan_BR_Condition table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Condition_Operator.Spartan_BR_Condition_Operator">
+            <summary>
+            Spartan_BR_Condition_Operator table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Event_Restrictions_Detail.Spartan_BR_Event_Restrictions_Detail">
+            <summary>
+            Spartan_BR_Event_Restrictions_Detail table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_History.Spartan_BR_History">
+            <summary>
+            Spartan_BR_History table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Modifications_Log.Spartan_BR_Modifications_Log">
+            <summary>
+            Spartan_BR_Modifications_Log table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Operation.Spartan_BR_Operation">
+            <summary>
+            Spartan_BR_Operation table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Operation_Detail.Spartan_BR_Operation_Detail">
+            <summary>
+            Spartan_BR_Operation_Detail table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Operation_Restrictions_Detail.Spartan_BR_Operation_Restrictions_Detail">
+            <summary>
+            Spartan_BR_Operation_Restrictions_Detail table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Operator_Type.Spartan_BR_Operator_Type">
+            <summary>
+            Spartan_BR_Operator_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Peer_Review.Spartan_BR_Peer_Review">
+            <summary>
+            Spartan_BR_Peer_Review table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Presentation_Control_Type.Spartan_BR_Presentation_Control_Type">
+            <summary>
+            Spartan_BR_Presentation_Control_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Process_Event.Spartan_BR_Process_Event">
+            <summary>
+            Spartan_BR_Process_Event table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Process_Event_Detail.Spartan_BR_Process_Event_Detail">
+            <summary>
+            Spartan_BR_Process_Event_Detail table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Rejection_Reason.Spartan_BR_Rejection_Reason">
+            <summary>
+            Spartan_BR_Rejection_Reason table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Scope.Spartan_BR_Scope">
+            <summary>
+            Spartan_BR_Scope table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Scope_Detail.Spartan_BR_Scope_Detail">
+            <summary>
+            Spartan_BR_Scope_Detail table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Status.Spartan_BR_Status">
+            <summary>
+            Spartan_BR_Status table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Testing.Spartan_BR_Testing">
+            <summary>
+            Spartan_BR_Testing table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_BR_Type_History.Spartan_BR_Type_History">
+            <summary>
+            Spartan_BR_Type_History table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Business_Rule.Spartan_Business_Rule">
+            <summary>
+            Spartan_Business_Rule table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_ChangePasswordAutorization.Spartan_ChangePasswordAutorization">
+            <summary>
+            Spartan_ChangePasswordAutorization table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Control_Type.Spartan_Control_Type">
+            <summary>
+            Spartan_Control_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Event_Type.Spartan_Event_Type">
+            <summary>
+            Spartan_Event_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartane_File.Spartane_File">
+            <summary>
+            Spartan_File table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Format.Spartan_Format">
+            <summary>
+            Spartan_Format table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Format_Configuration.Spartan_Format_Configuration">
+            <summary>
+            Spartan_Format_Configuration table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Format_Field.Spartan_Format_Field">
+            <summary>
+            Spartan_Format_Field table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Format_Permissions.Spartan_Format_Permissions">
+            <summary>
+            Spartan_Format_Permissions table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Format_Permission_Type.Spartan_Format_Permission_Type">
+            <summary>
+            Spartan_Format_Permission_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Format_Related.Spartan_Format_Related">
+            <summary>
+            Spartan_Format_Related table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Format_Type.Spartan_Format_Type">
+            <summary>
+            Spartan_Format_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Function.Spartan_Function">
+            <summary>
+            Spartan_Function table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Function_Characteristic.Spartan_Function_Characteristic">
+            <summary>
+            Spartan_Function_Characteristic table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Function_Characteristic_Config.Spartan_Function_Characteristic_Config">
+            <summary>
+            Spartan_Function_Characteristic_Config table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Function_Event.Spartan_Function_Event">
+            <summary>
+            Spartan_Function_Event table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Function_Status.Spartan_Function_Status">
+            <summary>
+            Spartan_Function_Status table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Function_Type.Spartan_Function_Type">
+            <summary>
+            Spartan_Function_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Function_Type_Status.Spartan_Function_Type_Status">
+            <summary>
+            Spartan_Function_Type_Status table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Language_Text.Spartan_Language_Text">
+            <summary>
+            Spartan_Language_Text table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Layout_Status.Spartan_Layout_Status">
+            <summary>
+            Spartan_Layout_Status table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Menu_Orientation.Spartan_Menu_Orientation">
+            <summary>
+            Spartan_Menu_Orientation table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Menu_Style.Spartan_Menu_Style">
+            <summary>
+            Spartan_Menu_Style table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Metadata.Spartan_Metadata">
+            <summary>
+            Spartan_Metadata table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Method_Clasification.Spartan_Method_Clasification">
+            <summary>
+            Spartan_Method_Clasification table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Method_Type.Spartan_Method_Type">
+            <summary>
+            Spartan_Method_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Method_Type_Function.Spartan_Method_Type_Function">
+            <summary>
+            Spartan_Method_Type_Function table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Method_Type_Status.Spartan_Method_Type_Status">
+            <summary>
+            Spartan_Method_Type_Status table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Module.Spartan_Module">
+            <summary>
+            Spartan_Module table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Module_Config.Spartan_Module_Config">
+            <summary>
+            Spartan_Module_Config table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Module_Object.Spartan_Module_Object">
+            <summary>
+            Spartan_Module_Object table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Module_Object_Characteristic.Spartan_Module_Object_Characteristic">
+            <summary>
+            Spartan_Module_Object_Characteristic table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Module_Object_Method.Spartan_Module_Object_Method">
+            <summary>
+            Spartan_Module_Object_Method table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Module_Status.Spartan_Module_Status">
+            <summary>
+            Spartan_Module_Status table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Notice.Spartan_Notice">
+            <summary>
+            Spartan_Notice table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Notice_Status.Spartan_Notice_Status">
+            <summary>
+            Spartan_Notice_Status table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Notice_Type.Spartan_Notice_Type">
+            <summary>
+            Spartan_Notice_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Object.Spartan_Object">
+            <summary>
+            Spartan_Object table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Object_Characteristic.Spartan_Object_Characteristic">
+            <summary>
+            Spartan_Object_Characteristic table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Object_Config.Spartan_Object_Config">
+            <summary>
+            Spartan_Object_Config table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Object_Method.Spartan_Object_Method">
+            <summary>
+            Spartan_Object_Method table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Object_Method_Characteristic.Spartan_Object_Method_Characteristic">
+            <summary>
+            Spartan_Object_Method_Characteristic table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Object_Method_Status.Spartan_Object_Method_Status">
+            <summary>
+            Spartan_Object_Method_Status table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Object_Path.Spartan_Object_Path">
+            <summary>
+            Spartan_Object_Path table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Object_Status.Spartan_Object_Status">
+            <summary>
+            Spartan_Object_Status table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Object_Type.Spartan_Object_Type">
+            <summary>
+            Spartan_Object_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Order_Type.Spartan_Order_Type">
+            <summary>
+            Spartan_Order_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Report.Spartan_Report">
+            <summary>
+            Spartan_Report table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Report_Advance_Filter.Spartan_Report_Advance_Filter">
+            <summary>
+            Spartan_Report_Advance_Filter table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Report_Fields_Detail.Spartan_Report_Fields_Detail">
+            <summary>
+            Spartan_Report_Fields_Detail table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Report_Field_Type.Spartan_Report_Field_Type">
+            <summary>
+            Spartan_Report_Field_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Report_Filter.Spartan_Report_Filter">
+            <summary>
+            Spartan_Report_Filter table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Report_Format.Spartan_Report_Format">
+            <summary>
+            Spartan_Report_Format table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Report_Function.Spartan_Report_Function">
+            <summary>
+            Spartan_Report_Function table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Report_Order_Type.Spartan_Report_Order_Type">
+            <summary>
+            Spartan_Report_Order_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Report_Permissions.Spartan_Report_Permissions">
+            <summary>
+            Spartan_Report_Permissions table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Report_Permission_Type.Spartan_Report_Permission_Type">
+            <summary>
+            Spartan_Report_Permission_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Report_Presentation_Type.Spartan_Report_Presentation_Type">
+            <summary>
+            Spartan_Report_Presentation_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Report_Presentation_View.Spartan_Report_Presentation_View">
+            <summary>
+            Spartan_Report_Presentation_View table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Report_Status.Spartan_Report_Status">
+            <summary>
+            Spartan_Report_Status table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Security_Event_Result.Spartan_Security_Event_Result">
+            <summary>
+            Spartan_Security_Event_Result table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Security_Event_Type.Spartan_Security_Event_Type">
+            <summary>
+            Spartan_Security_Event_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Security_Log.Spartan_Security_Log">
+            <summary>
+            Spartan_Security_Log table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Session_Event_Type.Spartan_Session_Event_Type">
+            <summary>
+            Spartan_Session_Event_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Session_Log.Spartan_Session_Log">
+            <summary>
+            Spartan_Session_Log table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Settings.Spartan_Settings">
+            <summary>
+            Spartan_Settings table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_System.Spartan_System">
+            <summary>
+            Spartan_System table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_System_Language.Spartan_System_Language">
+            <summary>
+            Spartan_System_Language table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_System_Layout.Spartan_System_Layout">
+            <summary>
+            Spartan_System_Layout table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Token_Type.Spartan_Token_Type">
+            <summary>
+            Spartan_Token_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Traduction_Concept_Type.Spartan_Traduction_Concept_Type">
+            <summary>
+            Spartan_Traduction_Concept_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Traduction_Detail.Spartan_Traduction_Detail">
+            <summary>
+            Spartan_Traduction_Detail table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Traduction_Language.Spartan_Traduction_Language">
+            <summary>
+            Spartan_Traduction_Language table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Traduction_Object.Spartan_Traduction_Object">
+            <summary>
+            Spartan_Traduction_Object table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Traduction_Object_Type.Spartan_Traduction_Object_Type">
+            <summary>
+            Spartan_Traduction_Object_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Traduction_Process.Spartan_Traduction_Process">
+            <summary>
+            Spartan_Traduction_Process table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Traduction_Process_Data.Spartan_Traduction_Process_Data">
+            <summary>
+            Spartan_Traduction_Process_Data table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Traduction_Process_Workflow.Spartan_Traduction_Process_Workflow">
+            <summary>
+            Spartan_Traduction_Process_Workflow table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Transaction_Log.Spartan_Transaction_Log">
+            <summary>
+            Spartan_Transaction_Log table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Transition_Event_Type.Spartan_Transition_Event_Type">
+            <summary>
+            Spartan_Transition_Event_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_Transition_Log_Type.Spartan_Transition_Log_Type">
+            <summary>
+            Spartan_Transition_Log_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_User.Spartan_User">
+            <summary>
+            Spartan_User table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_User_Alert.Spartan_User_Alert">
+            <summary>
+            Spartan_User_Alert table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_User_Alert_Status.Spartan_User_Alert_Status">
+            <summary>
+            Spartan_User_Alert_Status table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_User_Alert_Type.Spartan_User_Alert_Type">
+            <summary>
+            Spartan_User_Alert_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_User_Favorite_List.Spartan_User_Favorite_List">
+            <summary>
+            Spartan_User_Favorite_List table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_User_Favorite_Object.Spartan_User_Favorite_Object">
+            <summary>
+            Spartan_User_Favorite_Object table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_User_Historical_Password.Spartan_User_Historical_Password">
+            <summary>
+            Spartan_User_Historical_Password table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_User_Most_Used_Object.Spartan_User_Most_Used_Object">
+            <summary>
+            Spartan_User_Most_Used_Object table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_User_Object_Method_Config.Spartan_User_Object_Method_Config">
+            <summary>
+            Spartan_User_Object_Method_Config table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_User_Quicklink.Spartan_User_Quicklink">
+            <summary>
+            Spartan_User_Quicklink table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_User_Role.Spartan_User_Role">
+            <summary>
+            Spartan_User_Role table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_User_Role_Status.Spartan_User_Role_Status">
+            <summary>
+            Spartan_User_Role_Status table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_User_Rule_Module.Spartan_User_Rule_Module">
+            <summary>
+            Spartan_User_Rule_Module table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_User_Rule_Module_Object.Spartan_User_Rule_Module_Object">
+            <summary>
+            Spartan_User_Rule_Module_Object table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_User_Rule_Object_Function.Spartan_User_Rule_Object_Function">
+            <summary>
+            Spartan_User_Rule_Object_Function table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_User_Status.Spartan_User_Status">
+            <summary>
+            Spartan_User_Status table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_WorkFlow.Spartan_WorkFlow">
+            <summary>
+            Spartan_WorkFlow table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_WorkFlow_Conditions_by_State.Spartan_WorkFlow_Conditions_by_State">
+            <summary>
+            Spartan_WorkFlow_Conditions_by_State table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_WorkFlow_Condition.Spartan_WorkFlow_Condition">
+            <summary>
+            Spartan_WorkFlow_Condition table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_WorkFlow_Condition_Operator.Spartan_WorkFlow_Condition_Operator">
+            <summary>
+            Spartan_WorkFlow_Condition_Operator table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_WorkFlow_Information_by_State.Spartan_WorkFlow_Information_by_State">
+            <summary>
+            Spartan_WorkFlow_Information_by_State table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_WorkFlow_Matrix_of_States.Spartan_WorkFlow_Matrix_of_States">
+            <summary>
+            Spartan_WorkFlow_Matrix_of_States table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_WorkFlow_Operator.Spartan_WorkFlow_Operator">
+            <summary>
+            Spartan_WorkFlow_Operator table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_WorkFlow_Phases.Spartan_WorkFlow_Phases">
+            <summary>
+            Spartan_WorkFlow_Phases table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_WorkFlow_Phase_Status.Spartan_WorkFlow_Phase_Status">
+            <summary>
+            Spartan_WorkFlow_Phase_Status table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_WorkFlow_Phase_Type.Spartan_WorkFlow_Phase_Type">
+            <summary>
+            Spartan_WorkFlow_Phase_Type table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_WorkFlow_Roles_by_State.Spartan_WorkFlow_Roles_by_State">
+            <summary>
+            Spartan_WorkFlow_Roles_by_State table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_WorkFlow_State.Spartan_WorkFlow_State">
+            <summary>
+            Spartan_WorkFlow_State table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_WorkFlow_Status.Spartan_WorkFlow_Status">
+            <summary>
+            Spartan_WorkFlow_Status table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_WorkFlow_Type_Flow_Control.Spartan_WorkFlow_Type_Flow_Control">
+            <summary>
+            Spartan_WorkFlow_Type_Flow_Control table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Spartan_WorkFlow_Type_Work_Distribution.Spartan_WorkFlow_Type_Work_Distribution">
+            <summary>
+            Spartan_WorkFlow_Type_Work_Distribution table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Template_Dashboard_Detail.Template_Dashboard_Detail">
+            <summary>
+            Template_Dashboard_Detail table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Template_Dashboard_Editor.Template_Dashboard_Editor">
+            <summary>
+            Template_Dashboard_Editor table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.TTArchivos.TTArchivos">
+            <summary>
+            TTUsuarios table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.TTUsuarios.TTUsuarios">
+            <summary>
+            TTUsuarios table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.User.TTUsuario">
+            <summary>
+            User table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Configuration.TTConfig">
+            <summary>
+            Represents a TTConfig
+            </summary>
+        </member>
+        <member name="M:Spartane.Core.Configuration.TTConfig.Create(System.Object,System.Object,System.Xml.XmlNode)">
+            <summary>
+            Creates a configuration section handler.
+            </summary>
+            <param name="parent">Parent object.</param>
+            <param name="configContext">Configuration context object.</param>
+            <param name="section">Section XML node.</param>
+            <returns>The created section handler object.</returns>
+        </member>
+        <member name="P:Spartane.Core.Configuration.TTConfig.DynamicDiscovery">
+            <summary>
+            In addition to configured assemblies examine and load assemblies in the bin directory.
+            </summary>
+        </member>
+        <member name="P:Spartane.Core.Configuration.TTConfig.EngineType">
+            <summary>
+            A custom <see cref="T:Spartane.Core.Infraestructure.IEngine"/> to manage the application instead of the default.
+            </summary>
+        </member>
+        <member name="P:Spartane.Core.Configuration.TTConfig.ThemeBasePath">
+            <summary>
+            Specifices where the themes will be stored (~/Themes/)
+            </summary>
+        </member>
+        <member name="P:Spartane.Core.Configuration.TTConfig.IgnoreStartupTasks">
+            <summary>
+            Indicates whether we should ignore startup tasks
+            </summary>
+        </member>
+        <member name="P:Spartane.Core.Configuration.TTConfig.UserAgentStringsPath">
+            <summary>
+            Path to database with user agent strings
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Data.DataSettings">
+            <summary>
+            Data settings for the DAL
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Data.IDataProvider">
+            <summary>
+            Data provider interface
+            </summary>
+        </member>
+        <member name="M:Spartane.Core.Data.IDataProvider.InitConnectionFactory">
+            <summary>
+            Initialize connection factory
+            </summary>
+        </member>
+        <member name="M:Spartane.Core.Data.IDataProvider.SetDatabaseInitializer">
+            <summary>
+            Set database initializer
+            </summary>
+        </member>
+        <member name="M:Spartane.Core.Data.IDataProvider.InitDatabase">
+            <summary>
+            Initialize database
+            </summary>
+        </member>
+        <member name="M:Spartane.Core.Data.IDataProvider.GetParameter">
+            <summary>
+            Gets a support database parameter object (used by stored procedures)
+            </summary>
+            <returns>Parameter</returns>
+        </member>
+        <member name="P:Spartane.Core.Data.IDataProvider.StoredProceduredSupported">
+            <summary>
+            A value indicating whether this data provider supports stored procedures
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.FilteredList`1">
+            <summary>
+            Filtered list
+            </summary>
+            <typeparam name="T">T</typeparam>
+        </member>
+        <member name="T:Spartane.Core.Infraestructure.AppDomainTypeFinder">
+            <summary>
+            A class that finds types needed by Web by looping assemblies in the 
+            currently executing AppDomain. Only assemblies whose names matches
+            certain patterns are investigated and an optional list of assemblies
+            referenced by <see cref="P:Spartane.Core.Infraestructure.AppDomainTypeFinder.AssemblyNames"/> are always investigated.
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Infraestructure.ITypeFinder">
+            <summary>
+            Classes implementing this interface provide information about types 
+            to various services in the engine.
+            </summary>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.AppDomainTypeFinder.#ctor">
+            <summary>Creates a new instance of the AppDomainTypeFinder.</summary>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.AppDomainTypeFinder.GetAssemblies">
+            <summary>Gets the assemblies related to the current implementation.</summary>
+            <returns>A list of assemblies that should be loaded by the Nop factory.</returns>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.AppDomainTypeFinder.AddAssembliesInAppDomain(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Reflection.Assembly})">
+            <summary>
+            Iterates all assemblies in the AppDomain and if it's name matches the configured patterns add it to our list.
+            </summary>
+            <param name="addedAssemblyNames"></param>
+            <param name="assemblies"></param>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.AppDomainTypeFinder.AddConfiguredAssemblies(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Reflection.Assembly})">
+            <summary>
+            Adds specificly configured assemblies.
+            </summary>
+            <param name="addedAssemblyNames"></param>
+            <param name="assemblies"></param>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.AppDomainTypeFinder.Matches(System.String)">
+            <summary>
+            Check if a dll is one of the shipped dlls that we know don't need to be investigated.
+            </summary>
+            <param name="assemblyFullName">
+            The name of the assembly to check.
+            </param>
+            <returns>
+            True if the assembly should be loaded into Nop.
+            </returns>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.AppDomainTypeFinder.Matches(System.String,System.String)">
+            <summary>
+            Check if a dll is one of the shipped dlls that we know don't need to be investigated.
+            </summary>
+            <param name="assemblyFullName">
+            The assembly name to match.
+            </param>
+            <param name="pattern">
+            The regular expression pattern to match against the assembly name.
+            </param>
+            <returns>
+            True if the pattern matches the assembly name.
+            </returns>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.AppDomainTypeFinder.LoadMatchingAssemblies(System.String)">
+            <summary>
+            Makes sure matching assemblies in the supplied folder are loaded in the app domain.
+            </summary>
+            <param name="directoryPath">
+            The physical path to a directory containing dlls to load in the app domain.
+            </param>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.AppDomainTypeFinder.DoesTypeImplementOpenGeneric(System.Type,System.Type)">
+            <summary>
+            Does type implement generic?
+            </summary>
+            <param name="type"></param>
+            <param name="openGeneric"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Spartane.Core.Infraestructure.AppDomainTypeFinder.App">
+            <summary>The app domain to look for types in.</summary>
+        </member>
+        <member name="P:Spartane.Core.Infraestructure.AppDomainTypeFinder.LoadAppDomainAssemblies">
+            <summary>Gets or sets wether Nop should iterate assemblies in the app domain when loading Nop types. Loading patterns are applied when loading these assemblies.</summary>
+        </member>
+        <member name="P:Spartane.Core.Infraestructure.AppDomainTypeFinder.AssemblyNames">
+            <summary>Gets or sets assemblies loaded a startup in addition to those loaded in the AppDomain.</summary>
+        </member>
+        <member name="P:Spartane.Core.Infraestructure.AppDomainTypeFinder.AssemblySkipLoadingPattern">
+            <summary>Gets the pattern for dlls that we know don't need to be investigated.</summary>
+        </member>
+        <member name="P:Spartane.Core.Infraestructure.AppDomainTypeFinder.AssemblyRestrictToLoadingPattern">
+            <summary>Gets or sets the pattern for dll that will be investigated. For ease of use this defaults to match all but to increase performance you might want to configure a pattern that includes assemblies and your own.</summary>
+            <remarks>If you change this so that Nop assemblies arn't investigated (e.g. by not including something like "^Nop|..." you may break core functionality.</remarks>
+        </member>
+        <member name="T:Spartane.Core.Infraestructure.TTEngine">
+            <summary>
+            Engine
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Infraestructure.IEngine">
+            <summary>
+            Classes implementing this interface can serve as a portal for the 
+            various services composing the Nop engine. Edit functionality, modules
+            and implementations access most Nop functionality through this 
+            interface.
+            </summary>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.IEngine.Initialize(Spartane.Core.Configuration.TTConfig)">
+            <summary>
+            Initialize components and plugins in the nop environment.
+            </summary>
+            <param name="config">Config</param>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.IEngine.Resolve``1">
+            <summary>
+            Resolve dependency
+            </summary>
+            <typeparam name="T">T</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.IEngine.Resolve(System.Type)">
+            <summary>
+             Resolve dependency
+            </summary>
+            <param name="type">Type</param>
+            <returns></returns>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.IEngine.ResolveAll``1">
+            <summary>
+            Resolve dependencies
+            </summary>
+            <typeparam name="T">T</typeparam>
+            <returns></returns>
+        </member>
+        <member name="P:Spartane.Core.Infraestructure.IEngine.ContainerManager">
+            <summary>
+            Container manager
+            </summary>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.TTEngine.RunStartupTasks">
+            <summary>
+            Run startup tasks
+            </summary>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.TTEngine.RegisterDependencies(Spartane.Core.Configuration.TTConfig)">
+            <summary>
+            Register dependencies
+            </summary>
+            <param name="config">Config</param>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.TTEngine.Initialize(Spartane.Core.Configuration.TTConfig)">
+            <summary>
+            Initialize components and plugins in the nop environment.
+            </summary>
+            <param name="config">Config</param>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.TTEngine.Resolve``1">
+            <summary>
+            Resolve dependency
+            </summary>
+            <typeparam name="T">T</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.TTEngine.Resolve(System.Type)">
+            <summary>
+             Resolve dependency
+            </summary>
+            <param name="type">Type</param>
+            <returns></returns>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.TTEngine.ResolveAll``1">
+            <summary>
+            Resolve dependencies
+            </summary>
+            <typeparam name="T">T</typeparam>
+            <returns></returns>
+        </member>
+        <member name="P:Spartane.Core.Infraestructure.TTEngine.ContainerManager">
+            <summary>
+            Container manager
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Infraestructure.EngineContext">
+            <summary>
+            Provides access to the singleton instance of the Nop engine.
+            </summary>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.EngineContext.CreateEngineInstance(Spartane.Core.Configuration.TTConfig)">
+            <summary>
+            Creates a factory instance and adds a http application injecting facility.
+            </summary>
+            <param name="config">Config</param>
+            <returns>New engine instance</returns>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.EngineContext.Initialize(System.Boolean)">
+            <summary>
+            Initializes a static instance of the Nop factory.
+            </summary>
+            <param name="forceRecreate">Creates a new factory instance even though the factory has been previously initialized.</param>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.EngineContext.Replace(Spartane.Core.Infraestructure.IEngine)">
+            <summary>
+            Sets the static engine instance to the supplied engine. Use this method to supply your own engine implementation.
+            </summary>
+            <param name="engine">The engine to use.</param>
+            <remarks>Only use this method if you know what you're doing.</remarks>
+        </member>
+        <member name="P:Spartane.Core.Infraestructure.EngineContext.Current">
+            <summary>
+            Gets the singleton Nop engine used to access Nop services.
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Infraestructure.Singleton`1">
+            <summary>
+            A statically compiled "singleton" used to store objects throughout the 
+            lifetime of the app domain. Not so much singleton in the pattern's 
+            sense of the word as a standardized way to store single instances.
+            </summary>
+            <typeparam name="T">The type of object to store.</typeparam>
+            <remarks>Access to the instance is not synchrnoized.</remarks>
+        </member>
+        <member name="T:Spartane.Core.Infraestructure.Singleton">
+            <summary>
+            Provides access to all "singletons" stored by <see cref="T:Spartane.Core.Infraestructure.Singleton`1"/>.
+            </summary>
+        </member>
+        <member name="P:Spartane.Core.Infraestructure.Singleton.AllSingletons">
+            <summary>Dictionary of type to singleton instances.</summary>
+        </member>
+        <member name="P:Spartane.Core.Infraestructure.Singleton`1.Instance">
+            <summary>The singleton instance for the specified type T. Only one instance (at the time) of this object for each type of T.</summary>
+        </member>
+        <member name="T:Spartane.Core.Infraestructure.SingletonList`1">
+            <summary>
+            Provides a singleton list for a certain type.
+            </summary>
+            <typeparam name="T">The type of list to store.</typeparam>
+        </member>
+        <member name="P:Spartane.Core.Infraestructure.SingletonList`1.Instance">
+            <summary>The singleton instance for the specified type T. Only one instance (at the time) of this list for each type of T.</summary>
+        </member>
+        <member name="T:Spartane.Core.Infraestructure.SingletonDictionary`2">
+            <summary>
+            Provides a singleton dictionary for a certain key and vlaue type.
+            </summary>
+            <typeparam name="TKey">The type of key.</typeparam>
+            <typeparam name="TValue">The type of value.</typeparam>
+        </member>
+        <member name="P:Spartane.Core.Infraestructure.SingletonDictionary`2.Instance">
+            <summary>The singleton instance for the specified type T. Only one instance (at the time) of this dictionary for each type of T.</summary>
+        </member>
+        <member name="T:Spartane.Core.Infraestructure.WebAppTypeFinder">
+            <summary>
+            Provides information about types in the current web application. 
+            Optionally this class can look at all assemblies in the bin folder.
+            </summary>
+        </member>
+        <member name="M:Spartane.Core.Infraestructure.WebAppTypeFinder.GetBinDirectory">
+            <summary>
+            Gets a physical disk path of \Bin directory
+            </summary>
+            <returns>The physical path. E.g. "c:\inetpub\wwwroot\bin"</returns>
+        </member>
+        <member name="P:Spartane.Core.Infraestructure.WebAppTypeFinder.EnsureBinFolderAssembliesLoaded">
+            <summary>
+            Gets or sets wether assemblies in the bin folder of the web application should be specificly checked for beeing loaded on application load. This is need in situations where plugins need to be loaded in the AppDomain after the application been reloaded.
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.IPagedList`1">
+            <summary>
+            Paged list interface
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.PagedList`1">
+            <summary>
+            Paged list
+            </summary>
+            <typeparam name="T">T</typeparam>
+        </member>
+        <member name="M:Spartane.Core.PagedList`1.#ctor(System.Linq.IQueryable{`0},System.Int32,System.Int32)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="source">source</param>
+            <param name="pageIndex">Page index</param>
+            <param name="pageSize">Page size</param>
+        </member>
+        <member name="M:Spartane.Core.PagedList`1.#ctor(System.Collections.Generic.IList{`0},System.Int32,System.Int32)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="source">source</param>
+            <param name="pageIndex">Page index</param>
+            <param name="pageSize">Page size</param>
+        </member>
+        <member name="M:Spartane.Core.PagedList`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="source">source</param>
+            <param name="pageIndex">Page index</param>
+            <param name="pageSize">Page size</param>
+            <param name="totalCount">Total count</param>
+        </member>
+        <member name="T:Spartane.Core.Classes.Antiguedad_Ejercicios.Antiguedad_Ejercicios">
+            <summary>
+            Antiguedad_Ejercicios table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Bebidas.Bebidas">
+            <summary>
+            Bebidas table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Calorias.Calorias">
+            <summary>
+            Calorias table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Cantidad_Comidas.Cantidad_Comidas">
+            <summary>
+            Cantidad_Comidas table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Categorias_de_platillos.Categorias_de_platillos">
+            <summary>
+            Categorias_de_platillos table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Clasificacion_Ingredientes.Clasificacion_Ingredientes">
+            <summary>
+            Clasificacion_Ingredientes table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Detalle_Antecedentes_Familiares.Detalle_Antecedentes_Familiares">
+            <summary>
+            Detalle_Antecedentes_Familiares table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Detalle_Antecedentes_No_Patologicos.Detalle_Antecedentes_No_Patologicos">
+            <summary>
+            Detalle_Antecedentes_No_Patologicos table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Detalle_de_Ingredientes.Detalle_de_Ingredientes">
+            <summary>
+            Detalle_de_Ingredientes table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Detalle_de_Padecimientos.Detalle_de_Padecimientos">
+            <summary>
+            Detalle_de_Padecimientos table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Detalle_Examenes_Laboratorio.Detalle_Examenes_Laboratorio">
+            <summary>
+            Detalle_Examenes_Laboratorio table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Detalle_Preferencia_Bebidas.Detalle_Preferencia_Bebidas">
+            <summary>
+            Detalle_Preferencia_Bebidas table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Detalle_Terapia_Hormonal.Detalle_Terapia_Hormonal">
+            <summary>
+            Detalle_Terapia_Hormonal table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Dias_de_la_semana.Dias_de_la_semana">
+            <summary>
+            Dias_de_la_semana table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Dificultad_de_platillos.Dificultad_de_platillos">
+            <summary>
+            Dificultad_de_platillos table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Duracion_Ejercicio.Duracion_Ejercicio">
+            <summary>
+            Duracion_Ejercicio table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Ejercicios.Ejercicios">
+            <summary>
+            Ejercicios table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Empresas.Empresas">
+            <summary>
+            Empresas table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Enfermedades.Enfermedades">
+            <summary>
+            Enfermedades table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Estado.Estado">
+            <summary>
+            Estado table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Estado_Civil.Estado_Civil">
+            <summary>
+            Estado_Civil table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Estado_de_Animo.Estado_de_Animo">
+            <summary>
+            Estado_de_Animo table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Estatus_Paciente.Estatus_Paciente">
+            <summary>
+            Estatus_Paciente table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Estatus_Padecimiento.Estatus_Padecimiento">
+            <summary>
+            Estatus_Padecimiento table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Frecuencia_Ejercicio.Frecuencia_Ejercicio">
+            <summary>
+            Frecuencia_Ejercicio table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Frecuencia_Sustancias.Frecuencia_Sustancias">
+            <summary>
+            Frecuencia_Sustancias table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Indicadores_Laboratorio.Indicadores_Laboratorio">
+            <summary>
+            Indicadores_Laboratorio table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Ingredientes.Ingredientes">
+            <summary>
+            Ingredientes table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Marca.Marca">
+            <summary>
+            Marca table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Medicos.Medicos">
+            <summary>
+            Medicos table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Nivel_de_Satisfaccion.Nivel_de_Satisfaccion">
+            <summary>
+            Nivel_de_Satisfaccion table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Objetivos.Objetivos">
+            <summary>
+            Objetivos table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Pacientes.Pacientes">
+            <summary>
+            Pacientes table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Padecimientos.Padecimientos">
+            <summary>
+            Padecimientos table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Pais.Pais">
+            <summary>
+            Pais table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Parentesco.Parentesco">
+            <summary>
+            Parentesco table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Periodo_del_dia.Periodo_del_dia">
+            <summary>
+            Periodo_del_dia table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Platillos.Platillos">
+            <summary>
+            Platillos table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Preferencias_Entrecomidas.Preferencias_Entrecomidas">
+            <summary>
+            Preferencias_Entrecomidas table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Preferencias_Grasas.Preferencias_Grasas">
+            <summary>
+            Preferencias_Grasas table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Preferencias_Preparacion.Preferencias_Preparacion">
+            <summary>
+            Preferencias_Preparacion table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Preferencias_Sal.Preferencias_Sal">
+            <summary>
+            Preferencias_Sal table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Presentacion.Presentacion">
+            <summary>
+            Presentacion table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Rango_Consumo_Bebidas.Rango_Consumo_Bebidas">
+            <summary>
+            Rango_Consumo_Bebidas table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Rango_de_Horas.Rango_de_Horas">
+            <summary>
+            Rango_de_Horas table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Registro.Registro">
+            <summary>
+            Registro table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Respuesta_Logica.Respuesta_Logica">
+            <summary>
+            Respuesta_Logica table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Resultados_IMC.Resultados_IMC">
+            <summary>
+            Resultados_IMC table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Seleccion_de_Rangos.Seleccion_de_Rangos">
+            <summary>
+            Seleccion_de_Rangos table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Sexo.Sexo">
+            <summary>
+            Sexo table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Suplementos.Suplementos">
+            <summary>
+            Suplementos table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Sustancias.Sustancias">
+            <summary>
+            Sustancias table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Tiempo_Padecimiento.Tiempo_Padecimiento">
+            <summary>
+            Tiempo_Padecimiento table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Tiempos_de_Comida.Tiempos_de_Comida">
+            <summary>
+            Tiempos_de_Comida table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Tipo_de_Dieta.Tipo_de_Dieta">
+            <summary>
+            Tipo_de_Dieta table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Tipo_de_Registro.Tipo_de_Registro">
+            <summary>
+            Tipo_de_Registro table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Tipo_Ejercicio.Tipo_Ejercicio">
+            <summary>
+            Tipo_Ejercicio table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Tipo_Modificacion_Alimentos.Tipo_Modificacion_Alimentos">
+            <summary>
+            Tipo_Modificacion_Alimentos table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Tipo_Paciente.Tipo_Paciente">
+            <summary>
+            Tipo_Paciente table
+            </summary>
+        </member>
+        <member name="T:Spartane.Core.Classes.Unidades_de_Medida.Unidades_de_Medida">
+            <summary>
+            Unidades_de_Medida table
+            </summary>
+        </member>
+    </members>
+</doc>
